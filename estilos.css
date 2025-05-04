@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #000000; /* Fondo negro */
+    margin: 0;
+    padding: 0;
+    color: #ffffff; /* Color del texto en blanco */
+}
+
+.container {
+    padding: 20px; /* Agregar algo de espacio alrededor del contenido */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #d3d3d3; /* Color del texto */
+    margin-bottom: 30px;
+}
+
+.bienvenida-img {
+    width: 50%;  /* Ajusta el tamaño de la imagen al 50% del contenedor */
+    max-width: 400px; /* Máximo ancho de 400px */
+    height: auto; /* Mantiene la proporción original */
+    display: block; /* Para centrar */
+    margin: 20px auto; /* Centra la imagen horizontalmente con margen */
+    border-radius: 10px; /* Bordes redondeados opcional */
+}
+
+
+.inicio-img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.peliculas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Hacer que las columnas se ajusten automáticamente */
+    gap: 30px; /* Aumentar el espacio entre las películas */
+    justify-items: center; /* Centrar los elementos dentro de su contenedor */
+}
+
+.pelicula {
+    text-align: center;
+    background-color: #1e1e1e; /* Fondo oscuro para las tarjetas de películas */
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 200px; /* Ajusta el tamaño máximo de las tarjetas */
+    transition: transform 0.3s;
+}
+
+.pelicula:hover {
+    transform: scale(1.05); /* Pequeña animación al pasar el mouse por encima */
+}
+
+.pelicula img {
+    max-width: 100%; /* Asegurarse de que la imagen no se salga del contenedor */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.pelicula h2 {
+    font-size: 1.2em;
+    margin: 10px 0 5px 0;
+    color: #ffffff;
+}
+
+.pelicula p {
+    font-size: 0.9em;
+    color: #b3b3b3; /* Texto de descripción más claro */
+}
+
+/* Botón de volver */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d21515; /* Color de fondo del botón en rojo */
+    color: white; /* Color del texto en blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #b31212; /* Color rojo más oscuro al hacer hover */
+}

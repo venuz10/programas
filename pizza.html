@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pide tu Pizza</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .contenedor {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      background-color: #292929;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    .seccion {
+      display: none;
+    }
+    .activa {
+      display: block;
+    }
+    button {
+      background-color: #ff914d;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 10px;
+      width: 90%;
+    }
+    button:hover {
+      background-color: #e67e22;
+    }
+    label, input, select {
+      display: block;
+      margin: 10px auto;
+      width: 90%;
+      padding: 8px;
+      border-radius: 5px;
+    }
+    input, select {
+      background-color: #444;
+      color: white;
+      border: none;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Página 1: Bienvenida -->
+<div id="bienvenida" class="seccion activa contenedor">
+  <h1>¡Bienvenido a Pide tu Pizza!</h1>
+  <p>El mejor sabor en cada bocado. ¡Haz tu pedido ahora!</p>
+  <img src="piz.jpeg" alt="Pizza" />
+  <button onclick="irA('formulario')">Hacer Pedido</button>
+</div>
+
+<!-- Página 2: Formulario de pedido -->
+<div id="formulario" class="seccion contenedor">
+  <h2>Formulario del Pedido</h2>
+  <input type="text" id="nombre" placeholder="Tu nombre" required />
+  <input type="date" id="fecha" required />
+
+  <label>Pizza 1:</label>
+  <select id="pizza1">
+    <option value="10">Mexicana ($10)</option>
+    <option value="12">Pepperoni ($12)</option>
+    <option value="11">Hawaiana ($11)</option>
+  </select>
+
+  <label>Pizza 2:</label>
+  <select id="pizza2">
+    <option value="10">Mexicana ($10)</option>
+    <option value="12">Pepperoni ($12)</option>
+    <option value="11">Hawaiana ($11)</option>
+  </select>
+
+  <label>Pizza 3:</label>
+  <select id="pizza3">
+    <option value="10">Mexicana ($10)</option>
+    <option value="12">Pepperoni ($12)</option>
+    <option value="11">Hawaiana ($11)</option>
+  </select>
+
+  <label><input type="checkbox" id="quesoExtra" /> Queso extra ($2)</label>
+
+  <button onclick="irA('modoConsumo')">Siguiente</button>
+</div>
+
+<!-- Página 3: Modo de consumo -->
+<div id="modoConsumo" class="seccion contenedor">
+  <h2>Modo de Consumo</h2>
+  <label><input type="radio" name="consumo" value="local" checked /> Consumo local</label>
+  <label><input type="radio" name="consumo" value="domicilio" /> A domicilio</label>
+
+  <div id="datosDomicilio" style="display: none;">
+    <input type="text" id="direccion" placeholder="Dirección" />
+    <input type="text" id="telefono" placeholder="Teléfono" />
+  </div>
+
+  <button onclick="mostrarResumen()">Siguiente</button>
+</div>
+
+<!-- Página 4: Resumen -->
+<div id="resumen" class="seccion contenedor">
+  <h2>Resumen del Pedido</h2>
+  <div id="detallePedido"></div>
+  <button onclick="irA('pago')">Ir a Pago</button>
+</div>
+
+<!-- Página 5: Pago -->
+<div id="pago" class="seccion contenedor">
+  <h2>Método de Pago</h2>
+  <label><input type="radio" name="metodoPago" value="Efectivo" /> Efectivo</label>
+  <label><input type="radio" name="metodoPago" value="Tarjeta" /> Tarjeta</label>
+
+  <div id="pagoEfectivo" class="seccion">
+    <input type="text" id="totalEfectivo" readonly />
+    <input type="number" id="recibido" placeholder="Cantidad recibida" />
+    <p><strong>Cambio:</strong> <span id="cambio"></span></p>
+    <button onclick="pagar('efectivo')">Pagar</button>
+  </div>
+
+  <div id="pagoTarjeta" class="seccion">
+    <input type="text" placeholder="Nombre del Titular" />
+    <input type="text" placeholder="Número de Tarjeta" />
+    <input type="month" />
+    <input type="password" placeholder="CVV" maxlength="3" />
+    <button onclick="pagar('tarjeta')">Pagar</button>
+  </div>
+
+  <div id="opcionesFinales" style="margin-top: 20px; display: none;">
+    <button onclick="irA('pdf')">Generar PDF</button>
+    <button onclick="irA('bienvenida')">Salir</button>
+  </div>
+</div>
+
+<!-- Página 6: Generar PDF -->
+<div id="pdf" class="seccion contenedor">
+  <h2>Generar PDF del Pedido</h2>
+  <input type="email" id="correo" placeholder="Tu correo electrónico" />
+  <button onclick="generarPDF()">Descargar PDF</button>
+  <button onclick="irA('bienvenida')">Volver al inicio</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  let total = 0;
+  let resumenTexto = '';
+
+  function irA(id) {
+    document.querySelectorAll('.seccion').forEach(s => s.classList.remove('activa'));
+    document.getElementById(id).classList.add('activa');
+
+    if (id === "modoConsumo") {
+      document.getElementsByName("consumo").forEach(r => {
+        r.addEventListener("change", () => {
+          document.getElementById("datosDomicilio").style.display =
+            document.querySelector('input[name="consumo"]:checked').value === "domicilio" ? "block" : "none";
+        });
+      });
+    }
+
+    if (id === "pago") {
+      document.getElementsByName("metodoPago").forEach(radio => {
+        radio.addEventListener("change", () => {
+          document.getElementById("pagoEfectivo").style.display = radio.value === "Efectivo" ? "block" : "none";
+          document.getElementById("pagoTarjeta").style.display = radio.value === "Tarjeta" ? "block" : "none";
+        });
+      });
+    }
+  }
+
+  function mostrarResumen() {
+    const nombre = document.getElementById("nombre").value;
+    const fecha = document.getElementById("fecha").value;
+    const pizza1 = parseFloat(document.getElementById("pizza1").value);
+    const pizza2 = parseFloat(document.getElementById("pizza2").value);
+    const pizza3 = parseFloat(document.getElementById("pizza3").value);
+    const queso = document.getElementById("quesoExtra").checked ? 2 : 0;
+    const tipoConsumo = document.querySelector('input[name="consumo"]:checked').value;
+    const direccion = document.getElementById("direccion").value;
+    const telefono = document.getElementById("telefono").value;
+
+    total = pizza1 + pizza2 + pizza3 + queso;
+    resumenTexto = `
+Nombre: ${nombre}
+Fecha: ${fecha}
+Pizzas: $${pizza1 + pizza2 + pizza3}
+Queso Extra: $${queso}
+Total: $${total.toFixed(2)}
+Consumo: ${tipoConsumo}
+`;
+
+    if (tipoConsumo === "domicilio") {
+      resumenTexto += `Dirección: ${direccion}\nTeléfono: ${telefono}`;
+    }
+
+    document.getElementById("detallePedido").innerText = resumenTexto;
+    document.getElementById("totalEfectivo").value = `$${total.toFixed(2)}`;
+    irA("resumen");
+  }
+
+  function pagar(tipo) {
+    if (tipo === "efectivo") {
+      const recibido = parseFloat(document.getElementById("recibido").value);
+      if (recibido >= total) {
+        const cambio = recibido - total;
+        document.getElementById("cambio").innerText = `$${cambio.toFixed(2)}`;
+        alert("Pago en efectivo realizado con éxito.");
+      } else {
+        alert("La cantidad recibida es insuficiente.");
+        return;
+      }
+    } else {
+      alert("Pago con tarjeta realizado con éxito.");
+    }
+
+    document.getElementById("opcionesFinales").style.display = "block";
+  }
+
+  function generarPDF() {
+    const doc = new jspdf.jsPDF();
+    const correo = document.getElementById("correo").value;
+
+    doc.text("Resumen del Pedido", 10, 10);
+    doc.text(resumenTexto, 10, 20);
+    doc.save("pedido_pizza.pdf");
+
+    if (correo) {
+      alert("PDF generado. (Simulación de envío a: " + correo + ")");
+    } else {
+      alert("PDF generado.");
+    }
+  }
+</script>
+
+</body>
+</html>
