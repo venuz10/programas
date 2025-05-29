@@ -156,23 +156,6 @@ const peliculas = {
           imagen: "https://www.themoviedb.org/t/p/original/boR8lRoG1Brbq2lCI9oeJIaUjW0.jpg"
         }
       ],      
-    terror: [
-      {
-        titulo: "The Conjuring",
-        descripcion: "Investigadores paranormales enfrentan espíritus malignos.",
-        imagen: "https://mx.web.img3.acsta.net/pictures/19/03/20/19/26/1988298.jpg"
-      },
-      {
-        titulo: "IT",
-        descripcion: "Un payaso maligno aterroriza a niños en un pueblo.",
-        imagen: "https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg"
-      },
-      {
-        titulo: "Hereditary",
-        descripcion: "Una familia desvela oscuros secretos después de una pérdida.",
-        imagen: "https://es.web.img2.acsta.net/pictures/18/06/06/10/24/2467257.jpg"
-      }
-    ],
     drama: [
         {
           titulo: "The Shawshank Redemption",
@@ -229,54 +212,55 @@ const peliculas = {
         {
           titulo: "The Matrix",
           descripcion: "Un programador descubre que la realidad que conoce es una simulación creada por máquinas.",
-          imagen: "https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg"
+          imagen: "https://th.bing.com/th/id/R.e9d195aa5a1e7ffe1d116d62aff519f1?rik=nAAukjmJPjrecw&riu=http%3a%2f%2fimages1.fanpop.com%2fimages%2fphotos%2f1900000%2fMatrix-the-matrix-1949933-1024-768.jpg&ehk=mqFixYH1Q8HbakMwhZM38C7YIdvPrIWY6ngu7otQ9q8%3d&risl=&pid=ImgRaw&r=0"
         },
         {
           titulo: "Children of Men",
           descripcion: "En un futuro donde los humanos ya no pueden procrear, un hombre debe proteger a una joven embarazada.",
-          imagen: "https://upload.wikimedia.org/wikipedia/en/b/b9/Children_of_Men_film_poster.jpg"
+          imagen: "https://th.bing.com/th/id/OIP.rOAJxaS0XjHmlRpjoFEtwQHaKd?cb=iwc2&rs=1&pid=ImgDetMain"
         },
         {
           titulo: "Blade Runner",
           descripcion: "Un policía encargado de eliminar androides rebeldes empieza a cuestionar su propia existencia.",
-          imagen: "https://upload.wikimedia.org/wikipedia/en/5/53/Blade_Runner_poster.jpg"
+          imagen: "https://th.bing.com/th/id/R.804a92eba621a0215490981c53874dbb?rik=QO9a2LGn0bJ6Mg&pid=ImgRaw&r=0"
         },
         {
           titulo: "The Hunger Games",
           descripcion: "En una sociedad futurista, los jóvenes deben participar en un evento mortal para entretener a la élite gobernante.",
-          imagen: "https://upload.wikimedia.org/wikipedia/en/4/42/The_Hunger_Games_poster.jpg"
+          imagen: "https://th.bing.com/th/id/R.bb146c3350b5e41d9cd34b73445ffbf4?rik=FHUfdtYP9BU1kg&pid=ImgRaw&r=0"
         },
         {
           titulo: "V for Vendetta",
           descripcion: "En un futuro distópico, un hombre enmascarado lucha contra un régimen totalitario.",
-          imagen: "https://upload.wikimedia.org/wikipedia/en/a/a9/V_for_Vendetta_poster.jpg"
+          imagen: "https://i.etsystatic.com/26593283/r/il/89e18e/2857690394/il_1588xN.2857690394_dvnk.jpg"
         },
         {
           titulo: "District 9",
           descripcion: "Extraterrestres refugiados son confinados en condiciones inhumanas en Sudáfrica.",
-          imagen: "https://upload.wikimedia.org/wikipedia/en/b/b9/District_9_Poster.jpg"
+          imagen: "https://pics.filmaffinity.com/Distrito_9-474909692-large.jpg"
         },
         {
           titulo: "Minority Report",
           descripcion: "Una unidad policial previene crímenes antes de que ocurran, pero un agente es acusado de uno que aún no ha cometido.",
-          imagen: "https://upload.wikimedia.org/wikipedia/en/a/a5/Minority_Report_poster.jpg"
+          imagen: "https://th.bing.com/th/id/OIP.ifvkhO99CYOufNr8gIDZMgHaLH?cb=iwc2&rs=1&pid=ImgDetMain"
         },
         {
           titulo: "Snowpiercer",
           descripcion: "Los últimos humanos viven en un tren en movimiento tras un experimento fallido para detener el calentamiento global.",
-          imagen: "https://upload.wikimedia.org/wikipedia/en/c/c7/Snowpiercer_poster.jpg"
+          imagen: "https://th.bing.com/th/id/OIP.K7Jzx0Jmxf1N8WoQ5vfolQHaK-?cb=iwc2&rs=1&pid=ImgDetMain"
         },
         {
           titulo: "The Road",
           descripcion: "Un padre y su hijo atraviesan un paisaje desolado en busca de esperanza y supervivencia.",
-          imagen: "https://upload.wikimedia.org/wikipedia/en/4/47/The_Road_poster.jpg"
+          imagen: "https://th.bing.com/th/id/R.467ae927d4d4606168dce2e6e8f65c3f?rik=sQsEQpkYTXQh0A&pid=ImgRaw&r=0"
         },
         {
           titulo: "Equilibrium",
           descripcion: "En una sociedad que prohíbe las emociones, un agente empieza a cuestionar el sistema que protege.",
-          imagen: "https://upload.wikimedia.org/wikipedia/en/a/a5/Equilibrium_film_poster.jpg"
+          imagen: "https://i1.wp.com/lascronicasdedeckard.com/wp-content/uploads/2018/07/equilibrium-poster-1.jpg?resize=414%2C576&ssl=1"
         }
       ],
+
       aventura: [
         {
           titulo: "Indiana Jones and the Raiders of the Lost Ark",
@@ -328,93 +312,212 @@ const peliculas = {
           descripcion: "Un historiador y aventurero sigue pistas ocultas para encontrar un tesoro perdido ligado a los padres fundadores de EE.UU.",
           imagen: "https://th.bing.com/th/id/R.e951062b519b3b85cf2482201da4a663?rik=FWwlLyPl2w53%2fw&pid=ImgRaw&r=0"
         }
-      ]
-      
-      
-  };  
-  // Ir a categoría
-  function irACategoria(categoria) {
-    mostrarPeliculas(categoria);
+      ],
+      terror: [
+  {
+    titulo: "The Exorcist",
+    descripcion: "Una joven es poseída por un demonio y dos sacerdotes intentan salvarla mediante un exorcismo.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/6/6b/Exorcist_ver2.jpg"
+  },
+  {
+    titulo: "Hereditary",
+    descripcion: "Una familia comienza a descubrir oscuros secretos tras la muerte de la abuela.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/d/d2/Hereditary_%282018%29.png"
+  },
+  {
+    titulo: "The Conjuring",
+    descripcion: "Una pareja de investigadores paranormales enfrenta una aterradora presencia en una granja.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/1/1f/The_Conjuring_poster.jpg"
+  },
+  {
+    titulo: "It (2017)",
+    descripcion: "Un grupo de niños enfrenta a una entidad maligna que toma la forma de un payaso.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg"
+  },
+  {
+    titulo: "The Shining",
+    descripcion: "Un hombre pierde la cordura en un hotel aislado, poniendo en peligro a su familia.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/2/25/The_Shining_poster.jpg"
+  },
+  {
+    titulo: "A Nightmare on Elm Street",
+    descripcion: "Un asesino con garras ataca a los adolescentes en sus sueños.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/0/0c/Nightmareonelmstreet.jpg"
+  },
+  {
+    titulo: "Halloween (1978)",
+    descripcion: "Un asesino enmascarado regresa a su pueblo natal para continuar su matanza.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/a/a0/Halloween_%281978%29_theatrical_poster.jpg"
+  },
+  {
+    titulo: "The Babadook",
+    descripcion: "Una madre y su hijo son acosados por una presencia siniestra de un libro infantil.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/3/36/The-Babadook-Poster.jpg"
+  },
+  {
+    titulo: "The Texas Chain Saw Massacre",
+    descripcion: "Un grupo de jóvenes se topa con una familia caníbal liderada por Leatherface.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/6/64/The_Texas_Chain_Saw_Massacre_%281974%29_theatrical_poster.jpg"
+  },
+  {
+    titulo: "Midsommar",
+    descripcion: "Una pareja asiste a un festival sueco que esconde rituales perturbadores.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/1/10/Midsommar_%282019_film%29.png"
+  },
+  {
+    titulo: "Insidious",
+    descripcion: "Una familia intenta salvar a su hijo atrapado en un mundo espiritual tenebroso.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/2/2d/Insidious_poster.jpg"
+  },
+  {
+    titulo: "The Ring",
+    descripcion: "Una periodista investiga una cinta maldita que causa la muerte siete días después de verla.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/3/36/The_Ring_poster.jpg"
+  },
+  {
+    titulo: "Paranormal Activity",
+    descripcion: "Una pareja instala cámaras para registrar sucesos extraños en su casa.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/d/df/Paranormal_Activity_poster.jpg"
+  },
+  {
+    titulo: "Scream",
+    descripcion: "Un asesino enmascarado aterroriza a estudiantes mientras sigue reglas del cine de terror.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/7/79/Scream_movie_poster.jpg"
+  },
+  {
+    titulo: "Get Out",
+    descripcion: "Un joven afroamericano visita a la familia de su novia blanca y descubre un terror oculto.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/a/a3/Get_Out_poster.png"
+  },
+  {
+    titulo: "The Witch",
+    descripcion: "Una familia del siglo XVII se enfrenta a fuerzas oscuras tras ser desterrada a un bosque remoto.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/6/6d/The_Witch_poster.png"
+  },
+  {
+    titulo: "The Blair Witch Project",
+    descripcion: "Tres cineastas desaparecen mientras graban un documental sobre una leyenda local.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/2/2c/Blair_Witch_Project.jpg"
+  },
+  {
+    titulo: "Sinister",
+    descripcion: "Un escritor de crímenes reales descubre películas caseras que revelan asesinatos horribles.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/7/71/Sinister2012Poster.jpg"
+  },
+  {
+    titulo: "The Others",
+    descripcion: "Una mujer y sus hijos viven en una mansión donde empiezan a ocurrir fenómenos paranormales.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/4/45/TheOthers.jpg"
+  },
+  {
+    titulo: "The Cabin in the Woods",
+    descripcion: "Un grupo de amigos visita una cabaña remota sin saber que están siendo observados por una organización secreta.",
+    imagen: "https://upload.wikimedia.org/wikipedia/en/e/e1/The_Cabin_in_the_Woods_%28poster%29.jpg"
   }
-  
-  // Mostrar películas
-  function mostrarPeliculas(categoria) {
-    const container = document.querySelector('.container');
-    container.innerHTML = `<h1>Películas de ${categoria.charAt(0).toUpperCase() + categoria.slice(1)}</h1>`;
-  
-    const peliculasContainer = document.createElement('div');
-    peliculasContainer.classList.add('peliculas-container');
-  
-    peliculas[categoria].forEach((pelicula, index) => {
-      const peliculaDiv = document.createElement('div');
-      peliculaDiv.classList.add('pelicula');
-      peliculaDiv.innerHTML = `
-        <img src="${pelicula.imagen}" alt="Portada de ${pelicula.titulo}">
-        <h2>${pelicula.titulo}</h2>
-        <p>${pelicula.descripcion}</p>
-        <button class="rentar-btn" onclick='rentarPelicula("${categoria}", ${index})'>Rentar</button>
-      `;
-      peliculasContainer.appendChild(peliculaDiv);
-    });
-  
-    container.appendChild(peliculasContainer);
-  
-    const volverBtn = document.createElement('button');
-    volverBtn.textContent = 'Volver a Categorías';
-    volverBtn.classList.add('volver-btn');
-    volverBtn.onclick = mostrarCategorias;
-  
-    container.appendChild(volverBtn);
-  
-    const modalDiv = document.createElement('div');
-    modalDiv.id = "modal-container";
-    container.appendChild(modalDiv);
-  }
-  
-  // Mostrar formulario al rentar
-  function rentarPelicula(categoria, index) {
-    const pelicula = peliculas[categoria][index];
-    const modal = document.createElement('div');
-    modal.style.position = 'fixed';
-    modal.style.top = '0';
-    modal.style.left = '0';
-    modal.style.width = '100vw';
-    modal.style.height = '100vh';
-    modal.style.backgroundColor = 'rgba(0,0,0,0.8)';
-    modal.style.display = 'flex';
-    modal.style.justifyContent = 'center';
-    modal.style.alignItems = 'center';
-    modal.innerHTML = `
-      <div style="background:#fff; color:#000; padding:20px; border-radius:10px; max-width:400px; width:100%">
-        <h2>Rentar: ${pelicula.titulo}</h2>
-        <form onsubmit="enviarFormulario(event)">
-          <input type="text" placeholder="Nombre completo" required style="width:100%; margin-bottom:10px"><br>
-          <input type="tel" placeholder="Número telefónico" required style="width:100%; margin-bottom:10px"><br>
-          <input type="email" placeholder="Correo electrónico" required style="width:100%; margin-bottom:10px"><br>
-          <input type="text" placeholder="Número de tarjeta" required style="width:100%; margin-bottom:10px"><br>
-          <input type="text" placeholder="Fecha de vencimiento (MM/AA)" required style="width:100%; margin-bottom:10px"><br>
-          <input type="text" placeholder="CVV" required style="width:100%; margin-bottom:10px"><br>
-          <button type="submit" style="padding:10px 20px; background:#4caf50; color:white; border:none; border-radius:5px;">Confirmar Renta</button>
-          <button type="button" onclick="cerrarModal()" style="padding:10px 20px; margin-left:10px; background:#f44336; color:white; border:none; border-radius:5px;">Cancelar</button>
-        </form>
-      </div>
+]
+  };
+// Ir a categoría
+function irACategoria(categoria) {
+  mostrarPeliculas(categoria);
+}
+
+// Mostrar películas
+function mostrarPeliculas(categoria) {
+  const container = document.querySelector('.container');
+  container.innerHTML = `<h1>Películas de ${categoria.charAt(0).toUpperCase() + categoria.slice(1)}</h1>`;
+
+  const peliculasContainer = document.createElement('div');
+  peliculasContainer.classList.add('peliculas-container');
+
+  peliculas[categoria].forEach((pelicula, index) => {
+    const peliculaDiv = document.createElement('div');
+    peliculaDiv.classList.add('pelicula');
+    peliculaDiv.innerHTML = `
+      <img src="${pelicula.imagen}" alt="Portada de ${pelicula.titulo}">
+      <h2>${pelicula.titulo}</h2>
+      <p>${pelicula.descripcion}</p>
+      <button class="rentar-btn" onclick='rentarPelicula("${categoria}", ${index})'>Rentar</button>
     `;
-    document.body.appendChild(modal);
-  }
-  
-  function cerrarModal() {
-    const modal = document.querySelector('body > div:last-child');
-    if (modal) {
-      modal.remove();
-    }
-  }
-  
-  function enviarFormulario(e) {
+    peliculasContainer.appendChild(peliculaDiv);
+  });
+
+  container.appendChild(peliculasContainer);
+
+  const modalDiv = document.createElement('div');
+  modalDiv.id = "modal-container";
+  container.appendChild(modalDiv);
+}
+
+// Mostrar formulario al rentar
+function rentarPelicula(categoria, index) {
+  const pelicula = peliculas[categoria][index];
+  const modalContainer = document.getElementById('modal-container');
+
+  modalContainer.innerHTML = `
+    <div id="modal" style="
+      position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      background: white; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 1000;
+      width: 300px; border-radius: 8px;
+    ">
+      <h2>Rentar: ${pelicula.titulo}</h2>
+      <p><strong>Precio: $15</strong></p>
+      <form id="rentaForm">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{7,15}" title="Solo números, mínimo 7 y máximo 15 dígitos"><br><br>
+        <button type="submit">Confirmar renta</button>
+        <button type="button" id="cerrarModal" style="margin-left:10px;">Cancelar</button>
+      </form>
+    </div>
+    <div id="overlay" style="
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5); z-index: 999;
+    "></div>
+  `;
+
+  document.getElementById('cerrarModal').onclick = () => {
+    modalContainer.innerHTML = '';
+  };
+
+  document.getElementById('rentaForm').onsubmit = function(e) {
     e.preventDefault();
-    alert("¡Película rentada con éxito! Se enviará un correo con los detalles.");
-    cerrarModal();
-  }
-  
-  // Mostrar categorías al cargar
-  document.addEventListener('DOMContentLoaded', mostrarCategorias);
+    const nombre = this.nombre.value.trim();
+    const email = this.email.value.trim();
+    const telefono = this.telefono.value.trim();
+
+    // Validación: solo números, entre 7 y 15 dígitos
+    if (!/^\d{7,15}$/.test(telefono)) {
+      alert("El número de teléfono debe contener solo números (mínimo 7 y máximo 15 dígitos).");
+      return;
+    }
+
+    if(nombre && email && telefono){
+      alert(`Gracias, ${nombre}. Has rentado "${pelicula.titulo}" por $15. Te contactaremos a ${email}.`);
+      modalContainer.innerHTML = '';
+    }
+  };
+}
+
+// Mostrar categorías
+function mostrarCategorias() {
+  const container = document.querySelector('.container');
+  container.innerHTML = `<h1>Categorías</h1>`;
+  const categorias = Object.keys(peliculas);
+  categorias.forEach(categoria => {
+    const btn = document.createElement('button');
+    btn.textContent = categoria.charAt(0).toUpperCase() + categoria.slice(1);
+    btn.onclick = () => irACategoria(categoria);
+    container.appendChild(btn);
+  });
+
+  // Limpia modal si está abierto
+  const modalContainer = document.getElementById('modal-container');
+  if(modalContainer) modalContainer.innerHTML = '';
+}
+
+// Inicializar mostrando categorías
+mostrarCategorias();
   
