@@ -314,55 +314,55 @@ const peliculas = {
         }
       ],
       terror: [
-  {
+         {
     titulo: "The Exorcist",
     descripcion: "Una joven es poseída por un demonio y dos sacerdotes intentan salvarla mediante un exorcismo.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/6/6b/Exorcist_ver2.jpg"
+    imagen: "https://www.themoviedb.org/t/p/original/5x0CeVHJI8tcDx8tUUwYHQSNILq.jpg"
   },
   {
     titulo: "Hereditary",
     descripcion: "Una familia comienza a descubrir oscuros secretos tras la muerte de la abuela.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/d/d2/Hereditary_%282018%29.png"
+    imagen: "https://th.bing.com/th/id/R.a9c1fd7d60d0877cf00597c3f5ce4602?rik=TM%2f2s7rBn21SWg&riu=http%3a%2f%2fwww.impawards.com%2f2018%2fposters%2fhereditary_ver6_xlg.jpg&ehk=RnCW6cdJUtlRW%2bErr4waLi6lhEbyRNhuxw%2fFzO5UnVM%3d&risl=&pid=ImgRaw&r=0"
   },
   {
     titulo: "The Conjuring",
     descripcion: "Una pareja de investigadores paranormales enfrenta una aterradora presencia en una granja.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/1/1f/The_Conjuring_poster.jpg"
+    imagen: "https://th.bing.com/th/id/OIP.bE-50cm3WUCVGAXU-GQORAHaK-?rs=1&pid=ImgDetMainhttps://upload.wikimedia.org/wikipedia/en/1/1f/The_Conjuring_poster.jpg"
   },
   {
     titulo: "It (2017)",
     descripcion: "Un grupo de niños enfrenta a una entidad maligna que toma la forma de un payaso.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg"
+    imagen: "https://pics.filmaffinity.com/it-819298627-large.jpg"
   },
   {
     titulo: "The Shining",
     descripcion: "Un hombre pierde la cordura en un hotel aislado, poniendo en peligro a su familia.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/2/25/The_Shining_poster.jpg"
+    imagen: "https://th.bing.com/th/id/R.1a9ade5bfd513d0e09599f6d37c46454?rik=UKGDcaAf5peERQ&pid=ImgRaw&r=0"
   },
   {
     titulo: "A Nightmare on Elm Street",
     descripcion: "Un asesino con garras ataca a los adolescentes en sus sueños.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/0/0c/Nightmareonelmstreet.jpg"
+    imagen: "https://th.bing.com/th/id/R.08401093bfe00ca1a8c1253be79e6a21?rik=gF%2b1T7U5bDbaFw&riu=http%3a%2f%2fwww.grindstore.com%2fcdn%2fshop%2ffiles%2f165078-front.jpg%3fv%3d1710862656&ehk=qtai9PB6IuTxOSr8KE9L5Mz06jFtc580sfNLPb8apTo%3d&risl=&pid=ImgRaw&r=0"
   },
   {
     titulo: "Halloween (1978)",
     descripcion: "Un asesino enmascarado regresa a su pueblo natal para continuar su matanza.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/a/a0/Halloween_%281978%29_theatrical_poster.jpg"
+    imagen: "https://th.bing.com/th/id/OIP.5LY-lcze_dMFsv5bnapdggHaLH?rs=1&pid=ImgDetMain"
   },
   {
     titulo: "The Babadook",
     descripcion: "Una madre y su hijo son acosados por una presencia siniestra de un libro infantil.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/3/36/The-Babadook-Poster.jpg"
+    imagen: "https://th.bing.com/th/id/R.076c872df39f5ec745ff8db89977c3d8?rik=mUv2L9dGcSIUhA&pid=ImgRaw&r=0"
   },
   {
     titulo: "The Texas Chain Saw Massacre",
     descripcion: "Un grupo de jóvenes se topa con una familia caníbal liderada por Leatherface.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/6/64/The_Texas_Chain_Saw_Massacre_%281974%29_theatrical_poster.jpg"
+    imagen: "https://th.bing.com/th/id/OIP.w3TNsQh6bAmgSpqevgI16wHaLH?rs=1&pid=ImgDetMain"
   },
   {
     titulo: "Midsommar",
     descripcion: "Una pareja asiste a un festival sueco que esconde rituales perturbadores.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/1/10/Midsommar_%282019_film%29.png"
+    imagen: "https://th.bing.com/th/id/R.0a2b6acb239fcf354e621d628cd2ec14?rik=3DUSzFSeTERchQ&pid=ImgRaw&r=0"
   },
   {
     titulo: "Insidious",
@@ -372,17 +372,17 @@ const peliculas = {
   {
     titulo: "The Ring",
     descripcion: "Una periodista investiga una cinta maldita que causa la muerte siete días después de verla.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/3/36/The_Ring_poster.jpg"
+    imagen: "https://th.bing.com/th/id/OIP.QneCLrF2ayb_nYWumucvmAHaLH?rs=1&pid=ImgDetMain"
   },
   {
     titulo: "Paranormal Activity",
     descripcion: "Una pareja instala cámaras para registrar sucesos extraños en su casa.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/d/df/Paranormal_Activity_poster.jpg"
+    imagen: "https://th.bing.com/th/id/OIP.cY-H48TwTXKjsxTgwCzboQHaLH?rs=1&pid=ImgDetMain"
   },
   {
     titulo: "Scream",
     descripcion: "Un asesino enmascarado aterroriza a estudiantes mientras sigue reglas del cine de terror.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/7/79/Scream_movie_poster.jpg"
+    imagen: "https://es.web.img3.acsta.net/pictures/21/12/06/11/40/1005711.jpg"
   },
   {
     titulo: "Get Out",
@@ -392,31 +392,32 @@ const peliculas = {
   {
     titulo: "The Witch",
     descripcion: "Una familia del siglo XVII se enfrenta a fuerzas oscuras tras ser desterrada a un bosque remoto.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/6/6d/The_Witch_poster.png"
+    imagen: "https://th.bing.com/th/id/OIP.CY2Qm5AX5YqpMtLPQWsbYwAAAA?rs=1&pid=ImgDetMain"
   },
   {
     titulo: "The Blair Witch Project",
     descripcion: "Tres cineastas desaparecen mientras graban un documental sobre una leyenda local.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/2/2c/Blair_Witch_Project.jpg"
+    imagen: "https://es.web.img3.acsta.net/r_1280_720/img/21/9d/219d6c231ca6cb0d69a3482326c26645.jpg"
   },
   {
     titulo: "Sinister",
     descripcion: "Un escritor de crímenes reales descubre películas caseras que revelan asesinatos horribles.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/7/71/Sinister2012Poster.jpg"
+    imagen: "https://th.bing.com/th/id/R.9a824b51dee79a4bce7cb7e33630348b?rik=e15YIvXAtJptwA&pid=ImgRaw&r=0"
   },
   {
     titulo: "The Others",
     descripcion: "Una mujer y sus hijos viven en una mansión donde empiezan a ocurrir fenómenos paranormales.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/4/45/TheOthers.jpg"
+    imagen: "https://pics.filmaffinity.com/The_Others-613696263-large.jpg"
   },
   {
     titulo: "The Cabin in the Woods",
     descripcion: "Un grupo de amigos visita una cabaña remota sin saber que están siendo observados por una organización secreta.",
-    imagen: "https://upload.wikimedia.org/wikipedia/en/e/e1/The_Cabin_in_the_Woods_%28poster%29.jpg"
+    imagen: "https://th.bing.com/th/id/R.4a0a886a67ca19339d69e3679e04d14a?rik=LRcwsCSCviXcIw&riu=http%3a%2f%2fwww.impawards.com%2f2012%2fposters%2fcabin_in_the_woods_ver10_xlg.jpg&ehk=%2bTOKeWfwPH%2b1k8oLv1ATGjGUNEVS4%2f1XxiiI69HDbcI%3d&risl=&pid=ImgRaw&r=0"
   }
 ]
   };
-// Ir a categoría
+
+  // Ir a categoría
 function irACategoria(categoria) {
   mostrarPeliculas(categoria);
 }
@@ -448,7 +449,6 @@ function mostrarPeliculas(categoria) {
   container.appendChild(modalDiv);
 }
 
-// Mostrar formulario al rentar
 function rentarPelicula(categoria, index) {
   const pelicula = peliculas[categoria][index];
   const modalContainer = document.getElementById('modal-container');
@@ -457,17 +457,36 @@ function rentarPelicula(categoria, index) {
     <div id="modal" style="
       position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
       background: white; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 1000;
-      width: 300px; border-radius: 8px;
+      width: 320px; border-radius: 8px;
     ">
       <h2>Rentar: ${pelicula.titulo}</h2>
       <p><strong>Precio: $15</strong></p>
       <form id="rentaForm">
         <label for="nombre">Nombre:</label><br>
         <input type="text" id="nombre" name="nombre" required><br><br>
+
         <label for="email">Correo electrónico:</label><br>
         <input type="email" id="email" name="email" required><br><br>
+
         <label for="telefono">Teléfono:</label><br>
-        <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{7,15}" title="Solo números, mínimo 7 y máximo 15 dígitos"><br><br>
+        <input type="tel" id="telefono" name="telefono" required pattern="\\d{7,15}" title="Solo números, entre 7 y 15 dígitos"><br><br>
+
+        <label for="tarjeta">Tipo de tarjeta:</label><br>
+        <select id="tarjeta" name="tarjeta" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Visa">Visa</option>
+          <option value="Mastercard">Mastercard</option>
+          <option value="American Express">American Express</option>
+        </select><br><br>
+
+        <div id="datosTarjeta" style="display: none;">
+          <label for="numeroTarjeta">Número de tarjeta:</label><br>
+          <input type="text" id="numeroTarjeta" name="numeroTarjeta" pattern="\\d{13,16}" title="Debe tener entre 13 y 16 dígitos"><br><br>
+
+          <label for="nip">NIP:</label><br>
+          <input type="password" id="nip" name="nip" pattern="\\d{4}" title="Debe tener 4 dígitos"><br><br>
+        </div>
+
         <button type="submit">Confirmar renta</button>
         <button type="button" id="cerrarModal" style="margin-left:10px;">Cancelar</button>
       </form>
@@ -478,46 +497,48 @@ function rentarPelicula(categoria, index) {
     "></div>
   `;
 
+  // Mostrar datos de tarjeta si se selecciona una opción válida
+  const tarjetaSelect = document.getElementById('tarjeta');
+  tarjetaSelect.onchange = () => {
+    const datosTarjeta = document.getElementById('datosTarjeta');
+    datosTarjeta.style.display = tarjetaSelect.value ? 'block' : 'none';
+  };
+
   document.getElementById('cerrarModal').onclick = () => {
     modalContainer.innerHTML = '';
   };
 
-  document.getElementById('rentaForm').onsubmit = function(e) {
+  document.getElementById('rentaForm').onsubmit = function (e) {
     e.preventDefault();
+
     const nombre = this.nombre.value.trim();
     const email = this.email.value.trim();
     const telefono = this.telefono.value.trim();
+    const tarjeta = this.tarjeta.value;
+    const numeroTarjeta = this.numeroTarjeta.value.trim();
+    const nip = this.nip.value.trim();
 
-    // Validación: solo números, entre 7 y 15 dígitos
     if (!/^\d{7,15}$/.test(telefono)) {
-      alert("El número de teléfono debe contener solo números (mínimo 7 y máximo 15 dígitos).");
+      alert("Teléfono inválido: debe contener entre 7 y 15 dígitos.");
       return;
     }
 
-    if(nombre && email && telefono){
-      alert(`Gracias, ${nombre}. Has rentado "${pelicula.titulo}" por $15. Te contactaremos a ${email}.`);
-      modalContainer.innerHTML = '';
+    if (!tarjeta) {
+      alert("Selecciona un tipo de tarjeta.");
+      return;
     }
+
+    if (!/^\d{13,16}$/.test(numeroTarjeta)) {
+      alert("El número de tarjeta debe tener entre 13 y 16 dígitos.");
+      return;
+    }
+
+    if (!/^\d{4}$/.test(nip)) {
+      alert("El NIP debe ser un número de 4 dígitos.");
+      return;
+    }
+
+    alert(`Gracias, ${nombre}. Has rentado "${pelicula.titulo}" por $15 con tarjeta ${tarjeta}. Te contactaremos a ${email}.`);
+    modalContainer.innerHTML = '';
   };
 }
-
-// Mostrar categorías
-function mostrarCategorias() {
-  const container = document.querySelector('.container');
-  container.innerHTML = `<h1>Categorías</h1>`;
-  const categorias = Object.keys(peliculas);
-  categorias.forEach(categoria => {
-    const btn = document.createElement('button');
-    btn.textContent = categoria.charAt(0).toUpperCase() + categoria.slice(1);
-    btn.onclick = () => irACategoria(categoria);
-    container.appendChild(btn);
-  });
-
-  // Limpia modal si está abierto
-  const modalContainer = document.getElementById('modal-container');
-  if(modalContainer) modalContainer.innerHTML = '';
-}
-
-// Inicializar mostrando categorías
-mostrarCategorias();
-  
