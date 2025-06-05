@@ -5,15 +5,16 @@ body {
     background-size: cover;
     margin: 0;
     padding: 0;
-    color: #e0e0e0;
+    color: #f0f0f0;
 }
 
 .container {
     padding: 40px 20px;
     padding-top: 100px;
-    backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.7);
     min-height: 100vh;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Botón de regreso arriba */
@@ -22,49 +23,53 @@ body {
     top: 20px;
     left: 20px;
     z-index: 1000;
-    padding: 12px 25px;
+    padding: 14px 28px;
     font-size: 16px;
+    font-weight: bold;
     background: linear-gradient(135deg, #ff416c, #ff4b2b);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(255, 65, 108, 0.4);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(255, 65, 108, 0.5);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .back-button:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
     background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    box-shadow: 0 10px 30px rgba(255, 75, 43, 0.6);
 }
 
 h1 {
-    font-size: 3.5em;
+    font-size: 3.8em;
     color: #ffffff;
     margin-bottom: 40px;
-    text-shadow: 3px 3px 10px #ff4b2b;
+    text-shadow: 4px 4px 15px #ff4b2b;
 }
 
+/* Imágenes destacadas */
 .bienvenida-img, .imagen-destacada img {
     width: 55%;
-    max-width: 480px;
+    max-width: 500px;
     height: auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    margin: 30px auto;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(255, 75, 43, 0.5);
+    margin: 35px auto;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .bienvenida-img:hover, .imagen-destacada img:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(255, 75, 43, 0.7);
 }
 
 .inicio-img {
     max-width: 30%;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    box-shadow: 0 8px 22px rgba(255, 255, 255, 0.3);
 }
 
 /* Carrusel horizontal */
@@ -72,8 +77,8 @@ h1 {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    gap: 24px;
-    padding: 25px 30px;
+    gap: 28px;
+    padding: 30px 40px;
     scrollbar-width: none;
 }
 
@@ -83,54 +88,57 @@ h1 {
 
 .pelicula {
     flex: 0 0 auto;
-    width: 230px;
-    background: linear-gradient(145deg, #2a2a2a, #1c1c1c);
-    padding: 16px;
-    border-radius: 15px;
+    width: 240px;
+    background: linear-gradient(145deg, #333, #1a1a1a);
+    padding: 18px;
+    border-radius: 18px;
     text-align: center;
     transition: transform 0.4s, box-shadow 0.4s;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
 }
 
 .pelicula:hover {
-    transform: scale(1.12);
-    box-shadow: 0 10px 25px rgba(255, 75, 43, 0.4);
+    transform: scale(1.15);
+    box-shadow: 0 12px 35px rgba(255, 75, 43, 0.5);
 }
 
 .pelicula img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
 }
 
 .pelicula h2 {
-    font-size: 1.4em;
+    font-size: 1.5em;
     color: #ff4b2b;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 5px rgba(255, 75, 43, 0.6);
 }
 
 .pelicula p {
-    font-size: 0.95em;
-    color: #dddddd;
+    font-size: 1em;
+    color: #e0e0e0;
 }
 
 /* Botones generales */
 button {
-    padding: 13px 28px;
+    padding: 14px 30px;
     font-size: 18px;
     font-weight: bold;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
     margin: 15px;
-    box-shadow: 0 6px 15px rgba(0, 114, 255, 0.4);
+    box-shadow: 0 8px 18px rgba(79, 172, 254, 0.4);
     transition: all 0.3s ease;
 }
 
 button:hover {
-    background: linear-gradient(135deg, #0072ff, #00c6ff);
-    transform: scale(1.05);
-    }
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(79, 172, 254, 0.6);
+}
+
