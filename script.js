@@ -212,7 +212,7 @@ const peliculas = {
         {
           titulo: "The Matrix",
           descripcion: "Un programador descubre que la realidad que conoce es una simulación creada por máquinas.",
-          imagen: "https://th.bing.com/th/id/R.e9d195aa5a1e7ffe1d116d62aff519f1?rik=nAAukjmJPjrecw&riu=http%3a%2f%2fimages1.fanpop.com%2fimages%2fphotos%2f1900000%2fMatrix-the-matrix-1949933-1024-768.jpg&ehk=mqFixYH1Q8HbakMwhZM38C7YIdvPrIWY6ngu7otQ9q8%3d&risl=&pid=ImgRaw&r=0"
+          imagen: "https://thvnext.bing.com/th/id/OIP.BthwaDFzOiwwut5b3y84eQHaK9?cb=thvnext&rs=1&pid=ImgDetMain"
         },
         {
           titulo: "Children of Men",
@@ -295,7 +295,7 @@ const peliculas = {
         {
           titulo: "The Secret Life of Walter Mitty",
           descripcion: "Un hombre común se embarca en una extraordinaria aventura para encontrar una fotografía perdida.",
-          imagen: "https://th.bing.com/th/id/R.76e1a80c4093b6723455af5b206ac0a4?rik=CY7jW9U3SvMQmQ&riu=http%3a%2f%2fcdn.collider.com%2fwp-content%2fuploads%2fthe-secret-life-of-walter-mitty-poster-mountain.jpg&ehk=fDea5JjMyIpTy9imegcxxgIOBnFWRq2nUlPgFcYPptI%3d&risl=&pid=ImgRaw&r=0"
+          imagen: "https://www.themoviedb.org/t/p/original/leKQao68zra3SY2cPHZLzEbdLKT.jpg"
         },
         {
           titulo: "King Kong (2005)",
