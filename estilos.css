@@ -1,29 +1,34 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 20, 20, 0.95)),
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(10, 10, 10, 0.95)),
                 url('https://eldiario.com/wp-content/uploads/2020/12/Sala-de-cine.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
-    color: #e0e0e0;
+    color: #eaeaea;
 }
 
+/* Contenedor principal */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 40px 20px 40px;
-    backdrop-filter: pink(5px);
-    background-color: rgba(0, 0, 0, 0.6);
+    padding: 60px 20px;
     min-height: 100vh;
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.55);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    margin: 40px auto;
+    max-width: 1100px;
 }
 
-/* Botón base */
+/* Botones */
 button, .back-button {
     padding: 16px 32px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: white;
     border: none;
@@ -36,41 +41,39 @@ button, .back-button {
     animation: glow 2s ease-in-out infinite alternate;
 }
 
-/* Botón general */
 button {
     background: linear-gradient(135deg, #00c6ff, #0072ff);
-    box-shadow: 0 8px 20px rgba(0, 114, 255, 0.5);
+    box-shadow: 0 6px 16px rgba(0, 114, 255, 0.4);
 }
 
 button:hover {
-    transform: scale(1.1) translateY(-4px);
-    box-shadow: 0 0 25px #00f7ff, 0 0 35px #00c6ff;
+    transform: scale(1.05) translateY(-4px);
+    box-shadow: 0 0 20px #00f7ff, 0 0 30px #00c6ff;
     animation: bounce 0.5s;
 }
 
-/* Botón de regreso */
 .back-button {
     position: fixed;
     top: 20px;
     left: 20px;
     z-index: 1000;
     background: linear-gradient(135deg, #ff416c, #ff4b2b);
-    box-shadow: 0 8px 16px rgba(255, 65, 108, 0.5);
-    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(255, 65, 108, 0.4);
 }
 
 .back-button:hover {
-    transform: scale(1.1) translateY(-4px);
-    box-shadow: 0 0 25px #ff4b2b, 0 0 35px #ff416c;
+    transform: scale(1.05) translateY(-4px);
+    box-shadow: 0 0 20px #ff4b2b, 0 0 30px #ff416c;
     animation: bounce 0.5s;
 }
 
-/* Títulos llamativos */
+/* Títulos */
 h1, h2 {
-    color: #ffffff;
-    font-size: 3em;
-    text-shadow: 0 0 10px #ff4b2b, 0 0 20px #ff4b2b, 0 0 30px #ff4b2b;
+    color: #fff;
+    font-size: 2.8em;
+    text-shadow: 0 0 10px #ff4b2b, 0 0 20px #ff4b2b;
     animation: glow-title 2.5s ease-in-out infinite alternate;
+    margin: 20px 0;
 }
 
 /* Imágenes */
@@ -81,7 +84,6 @@ h1, h2 {
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     margin: 30px auto;
-    display: block;
     transition: transform 0.3s ease;
 }
 
@@ -96,7 +98,7 @@ h1, h2 {
     box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 
-/* Carrusel horizontal */
+/* Carrusel */
 .peliculas-container {
     display: flex;
     overflow-x: auto;
@@ -168,4 +170,3 @@ h1, h2 {
         text-shadow: 0 0 20px #ff6b4b, 0 0 40px #ff6b4b;
     }
 }
-
