@@ -1,11 +1,11 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(10, 10, 10, 0.95)),
-                url('https://eldiario.com/wp-content/uploads/2020/12/Sala-de-cine.jpg') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 20, 20, 0.95)),
+                url('https://i.pinimg.com/originals/48/bf/37/48bf3741a253b794c6abe661b3a94d3b.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
-    color: #eaeaea;
+    color: #e0e0e0;
 }
 
 /* Contenedor principal */
@@ -16,49 +16,35 @@ body {
     justify-content: center;
     text-align: center;
     padding: 60px 20px;
+    padding-top: 100px;
     min-height: 100vh;
     backdrop-filter: blur(6px);
-    background-color: rgba(0, 0, 0, 0.55);
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
-    border-radius: 16px;
-    margin: 40px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
     max-width: 1100px;
+    margin: auto;
 }
 
-/* Botones */
-button, .back-button {
-    padding: 16px 32px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    margin: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease-in-out;
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-button {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    box-shadow: 0 6px 16px rgba(0, 114, 255, 0.4);
-}
-
-button:hover {
-    transform: scale(1.05) translateY(-4px);
-    box-shadow: 0 0 20px #00f7ff, 0 0 30px #00c6ff;
-    animation: bounce 0.5s;
-}
-
+/* Botón de regreso */
 .back-button {
     position: fixed;
     top: 20px;
     left: 20px;
     z-index: 1000;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
     background: linear-gradient(135deg, #ff416c, #ff4b2b);
-    box-shadow: 0 6px 14px rgba(255, 65, 108, 0.4);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(255, 65, 108, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
 .back-button:hover {
@@ -69,14 +55,14 @@ button:hover {
 
 /* Títulos */
 h1, h2 {
-    color: #fff;
+    color: #ffffff;
+    text-shadow: 0 0 10px #ff4b2b, 0 0 20px #ff4b2b, 0 0 30px #ff4b2b;
     font-size: 2.8em;
-    text-shadow: 0 0 10px #ff4b2b, 0 0 20px #ff4b2b;
     animation: glow-title 2.5s ease-in-out infinite alternate;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
-/* Imágenes */
+/* Imágenes destacadas */
 .bienvenida-img, .imagen-destacada img {
     width: 55%;
     max-width: 480px;
@@ -84,6 +70,7 @@ h1, h2 {
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     margin: 30px auto;
+    display: block;
     transition: transform 0.3s ease;
 }
 
@@ -98,7 +85,7 @@ h1, h2 {
     box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 
-/* Carrusel */
+/* Carrusel horizontal */
 .peliculas-container {
     display: flex;
     overflow-x: auto;
@@ -124,7 +111,7 @@ h1, h2 {
 }
 
 .pelicula:hover {
-    transform: scale(1.12);
+    transform: scale(1.1);
     box-shadow: 0 10px 25px rgba(255, 75, 43, 0.4);
 }
 
@@ -146,6 +133,30 @@ h1, h2 {
     color: #dddddd;
 }
 
+/* Botones generales */
+button {
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 16px;
+    box-shadow: 0 8px 20px rgba(0, 114, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+button:hover {
+    transform: scale(1.05) translateY(-4px);
+    box-shadow: 0 0 25px #00f7ff, 0 0 35px #00c6ff;
+    animation: bounce 0.5s;
+}
+
 /* Animaciones */
 @keyframes glow {
     0% {
@@ -157,9 +168,9 @@ h1, h2 {
 }
 
 @keyframes bounce {
-    0% { transform: scale(1.1) translateY(0); }
-    50% { transform: scale(1.15) translateY(-8px); }
-    100% { transform: scale(1.1) translateY(0); }
+    0% { transform: scale(1.05) translateY(0); }
+    50% { transform: scale(1.1) translateY(-6px); }
+    100% { transform: scale(1.05) translateY(0); }
 }
 
 @keyframes glow-title {
