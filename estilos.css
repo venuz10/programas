@@ -67,69 +67,45 @@ h1 {
     box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 
-/* Carrusel horizontal con scroll visible y estilizado */
 .peliculas-container {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     gap: 24px;
     padding: 25px 30px;
-    scrollbar-width: thin;
-    scrollbar-color: #ff4b2b rgba(255, 255, 255, 0.1);
+    scrollbar-width: none; /* Firefox */
 }
 
 .peliculas-container::-webkit-scrollbar {
     height: 10px;
+    background: transparent;
 }
 
-.peliculas-container::-webkit-scrollbar-track {
+/* Mostrar la barra de scroll al hacer hover */
+.peliculas-container:hover {
+    scrollbar-width: thin;
+    scrollbar-color: #ff4b2b rgba(255, 255, 255, 0.1);
+}
+
+.peliculas-container:hover::-webkit-scrollbar {
+    height: 10px;
+}
+
+.peliculas-container:hover::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 5px;
 }
 
-.peliculas-container::-webkit-scrollbar-thumb {
+.peliculas-container:hover::-webkit-scrollbar-thumb {
     background: linear-gradient(135deg, #ff416c, #ff4b2b);
     border-radius: 6px;
     box-shadow: 0 0 6px rgba(255, 75, 43, 0.5);
 }
 
-.peliculas-container::-webkit-scrollbar-thumb:hover {
+.peliculas-container:hover::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #ff4b2b, #ff416c);
 }
 
-.pelicula {
-    flex: 0 0 auto;
-    width: 230px;
-    background: linear-gradient(145deg, #2a2a2a, #1c1c1c);
-    padding: 16px;
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.4s, box-shadow 0.4s;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
-
-.pelicula:hover {
-    transform: scale(1.12);
-    box-shadow: 0 10px 25px rgba(255, 75, 43, 0.4);
-}
-
-.pelicula img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.pelicula h2 {
-    font-size: 1.4em;
-    color: #ff4b2b;
-    margin-bottom: 6px;
-}
-
-.pelicula p {
-    font-size: 0.95em;
-    color: #dddddd;
-}
 
 /* Botones generales */
 button {
