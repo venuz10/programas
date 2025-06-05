@@ -455,12 +455,21 @@ function rentarPelicula(categoria, index) {
 
   modalContainer.innerHTML = `
     <div id="modal" style="
-      position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-      background: white; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 1000;
-      width: 320px; border-radius: 8px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffc0cb;
+      color: #444;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      width: 320px;
+      border-radius: 8px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     ">
-      <h2>Rentar: ${pelicula.titulo}</h2>
-      <p><strong>Precio: $15</strong></p>
+      <h2 style="color: #444;">Rentar: ${pelicula.titulo}</h2>
+      <p style="color: #444;"><strong>Precio: $15</strong></p>
       <form id="rentaForm">
         <label for="nombre">Nombre:</label><br>
         <input type="text" id="nombre" name="nombre" required><br><br>
@@ -491,13 +500,8 @@ function rentarPelicula(categoria, index) {
         <button type="button" id="cerrarModal" style="margin-left:10px;">Cancelar</button>
       </form>
     </div>
-    <div id="overlay" style="
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5); z-index: 999;
-    "></div>
   `;
 
-  // Mostrar datos de tarjeta si se selecciona una opción válida
   const tarjetaSelect = document.getElementById('tarjeta');
   tarjetaSelect.onchange = () => {
     const datosTarjeta = document.getElementById('datosTarjeta');
@@ -538,7 +542,8 @@ function rentarPelicula(categoria, index) {
       return;
     }
 
-    alert(`Gracias, ${nombre}. Has rentado "${pelicula.titulo}" por $15 con tarjeta ${tarjeta}. Te contactaremos a ${email}.`);
+        alert(`Gracias, ${nombre}. Has rentado "${pelicula.titulo}" por $15 con tarjeta ${tarjeta}. Te contactaremos a ${email}.`);
     modalContainer.innerHTML = '';
-  };
-}
+  }; 
+}; 
+
