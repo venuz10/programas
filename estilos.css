@@ -1,7 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    background-image: url('https://i.pinimg.com/originals/48/bf/37/48bf3741a253b794c6abe661b3a94d3b.jpg');
+    background-image: url('https://thvnext.bing.com/th/id/OIP.BZPW5LhL2wLqmh4Go5cpWQHaE8?cb=thvnext&rs=1&pid=ImgDetMain');
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -19,7 +19,7 @@ body {
 .back-button {
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px; /* cambiado para que quede a la derecha */
     z-index: 1000;
     padding: 10px 20px;
     font-size: 16px;
@@ -82,7 +82,7 @@ h1 {
     border-radius: 50%;
     padding: 10px 15px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 10;
     transition: background 0.3s ease, transform 0.2s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
@@ -90,23 +90,6 @@ h1 {
 .flecha:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: scale(1.1);
-}
-
-/* Flechas fijas en pantalla */
-.flecha-izquierda,
-.flecha-derecha {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-}
-
-.flecha-izquierda {
-    left: 10px;
-}
-
-.flecha-derecha {
-    right: 10px;
 }
 
 /* Carrusel horizontal */
@@ -117,8 +100,8 @@ h1 {
     scroll-behavior: smooth;
     gap: 25px;
     padding: 30px;
-    scrollbar-width: thin;
-    scrollbar-color: #b531ca #2a2a2a;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #b531ca #2a2a2a; /* Firefox */
 }
 
 /* Scrollbar personalizada (Webkit) */
@@ -127,7 +110,7 @@ h1 {
 }
 
 .peliculas-container::-webkit-scrollbar-track {
-    background: #2a2a2a;
+    background: #ea18ce;
     border-radius: 10px;
 }
 
@@ -149,13 +132,13 @@ h1 {
     background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+    box-shadow: 0 6px 12px rgba(208, 27, 160, 0.6);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pelicula:hover {
     transform: scale(1.08);
-    box-shadow: 0 10px 25px rgba(255,255,255,0.2);
+    box-shadow: 0 10px 25px rgba(230, 25, 230, 0.2);
 }
 
 .pelicula img {
@@ -163,7 +146,7 @@ h1 {
     height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 10px rgba(233, 40, 230, 0.414);
 }
 
 .pelicula h2 {
@@ -209,5 +192,44 @@ button:hover {
     height: auto;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Efecto 3D y rebote en texto */
+h1, h2 {
+    animation: rebote 2s infinite;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    color: #ffdd57;
+    text-shadow:
+        1px 1px 0 #000,
+        2px 2px 0 #000,
+        3px 3px 0 #000,
+        4px 4px 0 #000;
+}
+
+/* Animación de rebote */
+@keyframes rebote {
+    0%, 100% {
+        transform: translateY(0) rotateX(0deg);
+    }
+    30% {
+        transform: translateY(-10px) rotateX(10deg);
+    }
+    50% {
+        transform: translateY(5px) rotateX(-5deg);
+    }
+    70% {
+        transform: translateY(-5px) rotateX(5deg);
+    }
+}
+
+.formulario-renta {
+  background-color: #ffc0cb;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.formulario-renta label {
+  color: #555;
 }
 
