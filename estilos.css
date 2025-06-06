@@ -304,17 +304,25 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     margin-top: 30px;
+    text-align: center;
 }
 
 .alineacion-contenido img {
     max-width: 150px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.alineacion-contenido img:hover {
+    transform: scale(1.05);
 }
 
 .alineacion-contenido button {
-    min-width: 140px;
+    min-width: 150px;
+    padding: 10px 20px;
+    font-size: 16px;
 }
