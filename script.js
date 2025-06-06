@@ -290,12 +290,12 @@ const peliculas = {
         {
           titulo: "Life of Pi",
           descripcion: "Un joven sobrevive a un naufragio y queda atrapado en un bote con un tigre de Bengala.",
-          imagen: "https://th.bing.com/th/id/R.59140265cff345e68b5178d215ad33f5?rik=zIUIZWNe5aNwCA&pid=ImgRaw&r=0"
+          imagen: "https://www.themoviedb.org/t/p/original/leKQao68zra3SY2cPHZLzEbdLKT.jpg"
         },
         {
           titulo: "The Secret Life of Walter Mitty",
           descripcion: "Un hombre común se embarca en una extraordinaria aventura para encontrar una fotografía perdida.",
-          imagen: "https://www.themoviedb.org/t/p/original/leKQao68zra3SY2cPHZLzEbdLKT.jpg"
+          imagen: "https://th.bing.com/th/id/R.76e1a80c4093b6723455af5b206ac0a4?rik=CY7jW9U3SvMQmQ&riu=http%3a%2f%2fcdn.collider.com%2fwp-content%2fuploads%2fthe-secret-life-of-walter-mitty-poster-mountain.jpg&ehk=fDea5JjMyIpTy9imegcxxgIOBnFWRq2nUlPgFcYPptI%3d&risl=&pid=ImgRaw&r=0"
         },
         {
           titulo: "King Kong (2005)",
