@@ -1,36 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categorías de Películas</title>
-    <link rel="stylesheet" href="estilos.css" />
-    <style>
-      /* Estilos básicos para el modal */
-      #modalComentario {
-        display: none;
-        position: fixed;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-        background: white;
-        padding: 20px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        border-radius: 8px;
-        z-index: 1000;
-        width: 300px;
-      }
-      #overlay {
-        display: none;
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(0,0,0,0.5);
-        z-index: 999;
-      }
-      #modalComentario textarea {
-        width: 100%;
-        height: 80px;
-      }
-    </style>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
@@ -48,77 +22,11 @@
         <a href="distopia.html"><button>Distopía</button></a>
     </div>
 
-    <div class="imagen-debajo-botones">
-        <img src="https://png.pngtree.com/thumb_back/fw800/background/20231007/pngtree-vibrant-pink-3d-render-with-blue-movie-projector-amidst-colorful-balls-image_13517267.png" alt="Imagen categorías" />
-    </div>
+<div class="imagen-debajo-botones">
+    <img src="https://png.pngtree.com/thumb_back/fw800/background/20231007/pngtree-vibrant-pink-3d-render-with-blue-movie-projector-amidst-colorful-balls-image_13517267.png" alt="Imagen categorías" />
+</div>
 
-    <a href="bienvenida.html"><button class="inicio-btn">Regresar</button></a>
-
-    <!-- Botón para enviar comentario -->
-    <button id="btnComentario" style="margin-top: 20px;">Enviar comentario</button>
-
-    <!-- Overlay para modal -->
-    <div id="overlay"></div>
-
-    <!-- Modal para comentarios -->
-    <div id="modalComentario">
-      <h2>Enviar Comentario</h2>
-      <form id="formComentario">
-        <label for="nombre">Nombre:</label><br />
-        <input type="text" id="nombre" name="nombre" required /><br /><br />
-        <label for="email">Correo electrónico:</label><br />
-        <input type="email" id="email" name="email" required /><br /><br />
-        <label for="mensaje">Mensaje:</label><br />
-        <textarea id="mensaje" name="mensaje" required></textarea><br /><br />
-        <button type="submit">Enviar</button>
-        <button type="button" id="cerrarModalComentario" style="margin-left: 10px;">Cancelar</button>
-      </form>
-    </div>
-
-    <script>
-      const btnComentario = document.getElementById('btnComentario');
-      const modalComentario = document.getElementById('modalComentario');
-      const overlay = document.getElementById('overlay');
-      const cerrarModalComentario = document.getElementById('cerrarModalComentario');
-      const formComentario = document.getElementById('formComentario');
-
-      // Mostrar modal al hacer click en botón
-      btnComentario.addEventListener('click', () => {
-        modalComentario.style.display = 'block';
-        overlay.style.display = 'block';
-      });
-
-      // Cerrar modal
-      cerrarModalComentario.addEventListener('click', () => {
-        modalComentario.style.display = 'none';
-        overlay.style.display = 'none';
-      });
-
-      // Cerrar modal al dar click fuera del modal (overlay)
-      overlay.addEventListener('click', () => {
-        modalComentario.style.display = 'none';
-        overlay.style.display = 'none';
-      });
-
-      // Manejar envío del formulario
-      formComentario.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const nombre = formComentario.nombre.value.trim();
-        const email = formComentario.email.value.trim();
-        const mensaje = formComentario.mensaje.value.trim();
-
-        // Aquí podrías conectar con backend o servicio para enviar el comentario
-        // Por ahora solo mostramos un mensaje y cerramos el modal
-
-        alert(`Gracias ${nombre}, tu comentario ha sido recibido.\nNos contactaremos a ${email} si es necesario.`);
-        
-        formComentario.reset();
-        modalComentario.style.display = 'none';
-        overlay.style.display = 'none';
-      });
-    </script>
+     <a href="bienvenida.html"><button class="inicio-btn">Regresar</button></a>
 
 </body>
 </html>
-
