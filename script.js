@@ -470,7 +470,7 @@ function rentarPelicula(categoria, index) {
     ">
       <h2 style="color: #444;">Rentar: ${pelicula.titulo}</h2>
       <p style="color: #444;"><strong>Precio: $15</strong></p>
-      <form id="rentaForm">
+      <form id="rentaForm" onsubmit="event.preventDefault(); generarTicket('${categoria}', ${index});">
         <label for="nombre">Nombre:</label><br>
         <input type="text" id="nombre" name="nombre" required><br><br>
 
@@ -496,100 +496,21 @@ function rentarPelicula(categoria, index) {
           <input type="password" id="nip" name="nip" pattern="\\d{4}" title="Debe tener 4 dígitos"><br><br>
         </div>
 
-       <button class="rentar-btn" onclick='generarTicket("${categoria}", ${index})'>Comprar</button>
+        <button class="rentar-btn" type="submit">Comprar</button>
         <button type="button" id="cerrarModal" style="margin-left:10px;">Cancelar</button>
       </form>
     </div>
   `;
 
+  // Mostrar campos de tarjeta solo si se selecciona una opción válida
   const tarjetaSelect = document.getElementById('tarjeta');
-  tarjetaSelect.onchange = () => {
-    const datosTarjeta = document.getElementById('datosTarjeta');
-    datosTarjeta.style.display = tarjetaSelect.value ? 'block' : 'none';
-  };
+  const datosTarjetaDiv = document.getElementById('datosTarjeta');
+  tarjetaSelect.addEventListener('change', function () {
+    datosTarjetaDiv.style.display = tarjetaSelect.value ? 'block' : 'none';
+  });
 
-  document.getElementById('cerrarModal').onclick = () => {
+  // Cerrar modal
+  document.getElementById('cerrarModal').addEventListener('click', () => {
     modalContainer.innerHTML = '';
-  };
-
-  document.getElementById('rentaForm').onsubmit = function (e) {
-    e.preventDefault();
-
-    const nombre = this.nombre.value.trim();
-    const email = this.email.value.trim();
-    const telefono = this.telefono.value.trim();
-    const tarjeta = this.tarjeta.value;
-    const numeroTarjeta = this.numeroTarjeta.value.trim();
-    const nip = this.nip.value.trim();
-
-    if (!/^\d{7,15}$/.test(telefono)) {
-      alert("Teléfono inválido: debe contener entre 7 y 15 dígitos.");
-      return;
-    }
-
-    if (!tarjeta) {
-      alert("Selecciona un tipo de tarjeta.");
-      return;
-    }
-
-    if (!/^\d{13,16}$/.test(numeroTarjeta)) {
-      alert("El número de tarjeta debe tener entre 13 y 16 dígitos.");
-      return;
-    }
-
-    if (!/^\d{4}$/.test(nip)) {
-      alert("El NIP debe ser un número de 4 dígitos.");
-      return;
-    }
-
-        alert(`Gracias, ${nombre}. Has rentado "${pelicula.titulo}" por $15 con tarjeta ${tarjeta}. Te contactaremos a ${email}.`);
-    modalContainer.innerHTML = '';
-  }; 
-};   
-
-  // Mostrar campos de tarjeta al seleccionar tipo
-  const tarjetaSelect = document.getElementById("tarjeta");
-  const datosTarjeta = document.getElementById("datosTarjeta");
-
-  tarjetaSelect.addEventListener("change", function () {
-    datosTarjeta.style.display = this.value ? "block" : "none";
   });
-
-  // Evento para cerrar modal
-  document.getElementById("cerrarModal").addEventListener("click", function () {
-    modalContainer.innerHTML = "";
-  });
-
-  // Evento para confirmar renta y generar PDF
-  document.getElementById("rentaForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const nombre = document.getElementById("nombre").value;
-    const email = document.getElementById("email").value;
-    const telefono = document.getElementById("telefono").value;
-    const tarjeta = document.getElementById("tarjeta").value;
-    const numeroTarjeta = document.getElementById("numeroTarjeta").value;
-    const fecha = new Date().toLocaleString();
-
-    const infoRenta = `
-      Película rentada: ${pelicula.titulo}
-      Precio: $15
-      Nombre: ${nombre}
-      Email: ${email}
-      Teléfono: ${telefono}
-      Tipo de tarjeta: ${tarjeta}
-      Número de tarjeta: **** **** **** ${numeroTarjeta.slice(-4)}
-      Fecha: ${fecha}
-    `;
-
-    // Generar PDF
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    doc.setFontSize(12);
-    doc.text(infoRenta, 10, 20);
-    doc.save(`renta_${pelicula.titulo.replace(/\s+/g, '_')}.pdf`);
-
-    alert("¡Renta confirmada! Se ha descargado tu comprobante en PDF.");
-    modalContainer.innerHTML = "";
-  });
-
+}
