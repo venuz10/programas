@@ -4,7 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categorías de Películas</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primario: #ff4eae;
+            --color-secundario: #382bff;
+            --color-fondo: #2d2a4a;
+            --color-blanco: #fff;
+            --color-gris: #ececec;
+            --color-form: #fff0fa;
+            --color-accent: #ffd93b;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--color-secundario) 0%, var(--color-primario) 100%);
+            min-height: 100vh;
+            color: var(--color-blanco);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bienvenida {
+            text-align: center;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .bienvenida h1 {
+            font-size: 2.2rem;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-primario));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px #0003;
+        }
+
+        .categorias {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.3rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .categorias a {
+            text-decoration: none;
+        }
+
+        .categorias button {
+            background: linear-gradient(120deg, var(--color-primario), var(--color-secundario));
+            color: var(--color-blanco);
+            border: none;
+            outline: none;
+            border-radius: 1.7rem;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            box-shadow: 0 4px 18px 0 #0002, 0 1.5px 0 var(--color-accent);
+            cursor: pointer;
+            transition: transform 0.13s, box-shadow 0.13s, background 0.5s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .categorias button:hover,
+        .inicio-btn:hover,
+        .glow-btn:hover {
+            transform: scale(1.09);
+            box-shadow: 0 8px 32px 0 #0004, 0 1.5px 0 var(--color-accent);
+            background: linear-gradient(100deg, var(--color-accent), var(--color-primario), var(--color-secundario));
+        }
+
+        form {
+            background: var(--color-form);
+            padding: 2.2rem 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 6px 28px 0 #0002;
+            margin: 2rem auto;
+            max-width: 380px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+            color: #4c3c6f;
+        }
+        form label {
+            font-weight: 600;
+            color: var(--color-primario);
+        }
+        form input, form textarea {
+            border-radius: 1rem;
+            border: 1.5px solid var(--color-primario);
+            padding: 0.9rem;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            background: var(--color-gris);
+            transition: border 0.2s;
+        }
+        form input:focus, form textarea:focus {
+            border: 1.5px solid var(--color-secundario);
+        }
+        form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        form button[type="submit"] {
+            background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+            color: var(--color-blanco);
+            border: none;
+            border-radius: 1.1rem;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 0.9rem 0;
+            margin-top: 0.5rem;
+            box-shadow: 0 2px 10px 0 #0002;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.1s;
+        }
+        form button[type="submit"]:hover {
+            background: linear-gradient(100deg, var(--color-accent), var(--color-primario), var(--color-secundario));
+            transform: translateY(-2px) scale(1.04);
+        }
+
+        .glow-btn {
+            display: block;
+            margin: 1.5rem auto 0 auto;
+            background: linear-gradient(90deg, var(--color-secundario), var(--color-primario));
+            color: var(--color-blanco);
+            padding: 0.9rem 2.2rem;
+            border: none;
+            border-radius: 2rem;
+            font-size: 1.1rem;
+            font-family: inherit;
+            font-weight: 600;
+            box-shadow: 0 0 20px 0 var(--color-primario);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: box-shadow 0.22s, background 0.5s, transform 0.13s;
+        }
+
+        .inicio-btn {
+            margin: 2.5rem auto 1.5rem auto;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-primario));
+            color: var(--color-fondo);
+            border: none;
+            border-radius: 2rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 800;
+            box-shadow: 0 4px 16px 0 #0002;
+            display: block;
+            cursor: pointer;
+            transition: background 0.4s, transform 0.12s;
+        }
+
+        .imagen-debajo-botones {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .imagen-debajo-botones img {
+            width: 330px;
+            max-width: 80vw;
+            border-radius: 1.7rem;
+            box-shadow: 0 4px 32px 0 #0003;
+            animation: bounceIn 1.4s;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(.8) translateY(80px); opacity: 0; }
+            58% { transform: scale(1.08) translateY(-10px); opacity: 1; }
+            100% { transform: scale(1) translateY(0); }
+        }
+        /* Responsive */
+        @media (max-width: 700px) {
+            .categorias {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            form {
+                padding: 1.1rem 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -21,12 +207,21 @@
         <a href="aventura.html"><button>Aventura</button></a>
         <a href="distopia.html"><button>Distopía</button></a>
     </div>
+    
+    <form action="https://formspree.io/f/xqabeqkk" method="POST">
+        <label for="email" class="info-rosa">Tu correo:</label>
+        <input type="email" name="email" id="email" placeholder="Opcional">
+        <label for="message" class="info-rosa">Tu mensaje:</label>
+        <textarea name="message" id="message" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <button class="glow-btn" onclick="window.history.back();">Atrás</button>
 
-<div class="imagen-debajo-botones">
-    <img src="https://png.pngtree.com/thumb_back/fw800/background/20231007/pngtree-vibrant-pink-3d-render-with-blue-movie-projector-amidst-colorful-balls-image_13517267.png" alt="Imagen categorías" />
-</div>
+    <div class="imagen-debajo-botones">
+        <img src="https://png.pngtree.com/thumb_back/fw800/background/20231007/pngtree-vibrant-pink-3d-render-with-blue-movie-projector-amidst-colorful-balls-image_13517267.png" alt="Imagen categorías" />
+    </div>
 
-     <a href="bienvenida.html"><button class="inicio-btn">Regresar</button></a>
+    <a href="bienvenida.html"><button class="inicio-btn">Regresar</button></a>
 
 </body>
 </html>
