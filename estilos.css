@@ -1,13 +1,20 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    background-image: url('https://thvnext.bing.com/th/id/OIP.BZPW5LhL2wLqmh4Go5cpWQHaE8?cb=thvnext&rs=1&pid=ImgDetMain');
+    /* background-image: url('https://thvnext.bing.com/th/id/OIP.BZPW5LhL2wLqmh4Go5cpWQHaE8?cb=thvnext&rs=1&pid=ImgDetMain'); */
+    /* Se elimina la imagen de fondo para la parte de bienvenida */
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
     color: #e0e0e0;
 }
+
+/* Si quieres que solo la sección de bienvenida no tenga fondo,
+   pero el resto de la página sí, puedes aplicar el fondo a un contenedor
+   o a secciones específicas en vez de <body>. 
+   Si quieres que todo el sitio pierda el fondo, solo elimina la línea comentada arriba.
+*/
 
 .container {
     padding: 20px;
