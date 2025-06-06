@@ -29,89 +29,8 @@ body {
 }
 
 @keyframes move {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100% 0;
-    }
-}
-
-/* Estilo uniforme para todas las imágenes */
-.imagen-uniforme {
-    width: 200px; /* Ajusta el tamaño a tu preferencia */
-    height: 200px;
-    object-fit: cover; /* Evita la deformación */
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Botón de regreso */
-.back-button {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-    padding: 10px 20px;
-    font-size: 16px;
-    background: linear-gradient(135deg, #ff4e50, #f9d423);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 0 0 10px rgba(255, 78, 80, 0.7);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.back-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 78, 80, 0.9);
-}
-
-/* Carrusel de imágenes */
-.peliculas-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 25px;
-    padding: 30px;
-}
-
-.pelicula {
-    flex: 0 0 auto;
-    width: 220px;
-    text-align: center;
-    background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(208, 27, 160, 0.6);
-}
-
-.pelicula img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 10px rgba(233, 40, 230, 0.414);
-    display: block;
-}
-
-/* Estilos responsivos */
-@media (max-width: 600px) {
-    .imagen-uniforme {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-@keyframes hi {
-    0% {
-        background-position: 0px 220px, 3px 220px, 151.5px 337.5px;
-    }
-    to {
-        background-position: 0px 6800px, 3px 6800px, 151.5px 6917.5px;
-    }
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
 }
 
 .back-button {
@@ -266,7 +185,6 @@ h2 {
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(208, 27, 160, 0.6);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Para alinear las imágenes y botones dentro de .pelicula */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -407,6 +325,7 @@ button:hover,
     color: #555;
 }
 
+/* AGRUPACIÓN Y ALINEACIÓN DE IMÁGENES + BOTONES */
 .alineacion-contenido {
     display: flex;
     justify-content: center;
@@ -417,11 +336,14 @@ button:hover,
     text-align: center;
 }
 
-.alineacion-contenido > * {
+.alineacion-contenido > div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Asegura que tanto imágenes como botones se centren */
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .alineacion-contenido img {
@@ -444,10 +366,9 @@ button:hover,
     font-size: 16px;
     display: block;
     margin: 10px auto 0 auto;
-    /* Centra los botones debajo de las imágenes si están juntos */
 }
 
-/* Responsive for smaller screens */
+/* Responsive */
 @media (max-width: 900px) {
     .alineacion-contenido {
         flex-direction: column;
@@ -468,7 +389,8 @@ button:hover,
         width: 80vw;
         max-width: 200px;
     }
-    .imagen-destacada img, .imagen-debajo-botones img {
+    .imagen-destacada img,
+    .imagen-debajo-botones img {
         width: 80%;
         max-width: 220px;
     }
