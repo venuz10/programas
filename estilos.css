@@ -6,7 +6,7 @@ body {
     background-attachment: fixed;
     margin: 0;
     padding: 0;
-    color: #e0e0e0;
+    color: #e0e0e082;
 }
 
 .container {
@@ -15,11 +15,10 @@ body {
     backdrop-filter: blur(3px);
 }
 
-/* Botón de regreso arriba */
 .back-button {
     position: fixed;
     top: 20px;
-    right: 20px; /* cambiado para que quede a la derecha */
+    left: 20px; /* cambiado de right a left */
     z-index: 1000;
     padding: 10px 20px;
     font-size: 16px;
@@ -45,31 +44,24 @@ h1 {
     margin-bottom: 30px;
 }
 
+/* Imagen de bienvenida modificada */
 .bienvenida-img {
-    width: 15%;
-    max-width: 150px;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+    margin-top: 20px;
 }
 
 @media (max-width: 600px) {
     .bienvenida-img {
-        width: 30%;
-        max-width: 120px;
+        width: 25%;
+        max-width: 90px;
     }
 }
 
-
-
 .recuadro-texto {
-    background: rgba(0, 0, 0, 0.6); /* fondo semitransparente oscuro */
+    background: rgba(0, 0, 0, 0.6);
     border: 2px solid #ffdd57;
     padding: 25px;
     border-radius: 20px;
-    margin: 30px auto;
+    margin: 20px auto;
     max-width: 700px;
     color: #fff;
     box-shadow: 0 8px 20px rgba(255, 221, 87, 0.4);
@@ -94,7 +86,6 @@ h1 {
     line-height: 1.6;
     margin-top: 15px;
 }
-
 
 .inicio-img {
     max-width: 20%;
@@ -141,11 +132,10 @@ h1 {
     scroll-behavior: smooth;
     gap: 25px;
     padding: 30px;
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: #b531ca #2a2a2a; /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #b531ca #2a2a2a;
 }
 
-/* Scrollbar personalizada (Webkit) */
 .peliculas-container::-webkit-scrollbar {
     height: 12px;
 }
@@ -212,14 +202,35 @@ button {
     border-radius: 12px;
     cursor: pointer;
     margin: 15px;
-    box-shadow: 0 5px 15px rgba(181, 49, 202, 0.5);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.7); /* sombra rosa */
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    animation: reboteBoton 2s infinite; /* animación rebote */
 }
 
 button:hover {
     background: linear-gradient(135deg, #c843e6, #7a1691);
     transform: scale(1.07);
-    box-shadow: 0 8px 20px rgba(198, 65, 230, 0.7);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.9); /* sombra rosa más intensa */
+}
+
+/* Animación de rebote para botones */
+@keyframes reboteBoton {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 5px 15px rgba(255, 105, 180, 0.7);
+    }
+    30% {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(255, 105, 180, 0.9);
+    }
+    50% {
+        transform: translateY(5px);
+        box-shadow: 0 6px 18px rgba(255, 105, 180, 0.8);
+    }
+    70% {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(255, 105, 180, 0.85);
+    }
 }
 
 /* Imagen destacada por categoría */
@@ -264,12 +275,26 @@ h1, h2 {
     }
 }
 
+/* Estilos para la imagen debajo de los botones en la página de categorías */
+.imagen-debajo-botones {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.imagen-debajo-botones img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6); /* sombra rosa suave */
+}
+
+/* Estilos del formulario de renta */
 .formulario-renta {
-  background-color: #ffc0cb;
-  padding: 15px;
-  border-radius: 6px;
+    background-color: #ffc0cb;
+    padding: 15px;
+    border-radius: 6px;
 }
 
 .formulario-renta label {
-  color: #555;
+    color: #555;
 }
