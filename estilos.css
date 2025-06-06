@@ -7,25 +7,8 @@ body {
     margin: 0;
     padding: 0;
     color: #e0e0e082;
-    }
-    .bienvenida-img {
-    display: block;
-    margin: 0 auto 20px auto; /* centrado y separación inferior */
-    width: 30%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
-/* Nuevo contenedor para los botones debajo de la imagen */
-.botones-bienvenida {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 10px;
-}
 .container {
     padding: 20px;
     padding-top: 80px;
@@ -36,7 +19,7 @@ body {
     position: fixed;
     top: 20px;
     left: 20px; /* cambiado de right a left */
-    z-index: 9999; /* aumentado para garantizar que siempre esté encima */
+    z-index: 1000;
     padding: 10px 20px;
     font-size: 16px;
     background: linear-gradient(135deg, #ff4e50, #f9d423);
@@ -315,4 +298,3 @@ h1, h2 {
 .formulario-renta label {
     color: #555;
 }
-
