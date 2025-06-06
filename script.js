@@ -546,3 +546,50 @@ function rentarPelicula(categoria, index) {
     modalContainer.innerHTML = '';
   }; 
 };   
+
+  // Mostrar campos de tarjeta al seleccionar tipo
+  const tarjetaSelect = document.getElementById("tarjeta");
+  const datosTarjeta = document.getElementById("datosTarjeta");
+
+  tarjetaSelect.addEventListener("change", function () {
+    datosTarjeta.style.display = this.value ? "block" : "none";
+  });
+
+  // Evento para cerrar modal
+  document.getElementById("cerrarModal").addEventListener("click", function () {
+    modalContainer.innerHTML = "";
+  });
+
+  // Evento para confirmar renta y generar PDF
+  document.getElementById("rentaForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const email = document.getElementById("email").value;
+    const telefono = document.getElementById("telefono").value;
+    const tarjeta = document.getElementById("tarjeta").value;
+    const numeroTarjeta = document.getElementById("numeroTarjeta").value;
+    const fecha = new Date().toLocaleString();
+
+    const infoRenta = `
+      Película rentada: ${pelicula.titulo}
+      Precio: $15
+      Nombre: ${nombre}
+      Email: ${email}
+      Teléfono: ${telefono}
+      Tipo de tarjeta: ${tarjeta}
+      Número de tarjeta: **** **** **** ${numeroTarjeta.slice(-4)}
+      Fecha: ${fecha}
+    `;
+
+    // Generar PDF
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    doc.setFontSize(12);
+    doc.text(infoRenta, 10, 20);
+    doc.save(`renta_${pelicula.titulo.replace(/\s+/g, '_')}.pdf`);
+
+    alert("¡Renta confirmada! Se ha descargado tu comprobante en PDF.");
+    modalContainer.innerHTML = "";
+  });
+
