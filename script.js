@@ -514,3 +514,13 @@ function rentarPelicula(categoria, index) {
     modalContainer.innerHTML = '';
   });
 }
+emailjs.send('service_id', 'template_id', {
+  to_email: email,
+  pelicula: pelicula.titulo,
+  nombre: nombre,
+  precio: '15',
+  fecha: new Date().toLocaleString()
+}, 'public_key')
+.then(() => alert('Correo enviado'))
+.catch(err => alert('Error enviando correo: ' + err));
+
