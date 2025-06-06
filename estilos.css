@@ -1,44 +1,41 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    /* background-image: url('https://thvnext.bing.com/th/id/OIP.BZPW5LhL2wLqmh4Go5cpWQHaE8?cb=thvnext&rs=1&pid=ImgDetMain'); */
-    /* Se elimina la imagen de fondo para la parte de bienvenida */
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
     color: #e0e0e0;
 }
-.container {
-  width: 100%;
-  height: 100%;
-  /* Add your background pattern here */
-  --s: 100px;
-  --c-inner: #adf;
-  --c-outer: skyblue;
-  --c-outer2: white;
 
-  background: radial-gradient(
-    circle at 50% 99%,
-    transparent 10%,
-    var(--c-inner) 10% 30%,
-    var(--c-outer) 30% 60%,
-    var(--c-outer2) 60% 100%,
-    transparent 100%
-  );
-  background-size: var(--s) var(--s);
-  animation: move 5s infinite linear;
+.container {
+    width: 100%;
+    height: 100%;
+    --s: 100px;
+    --c-inner: #adf;
+    --c-outer: skyblue;
+    --c-outer2: white;
+
+    background: radial-gradient(
+        circle at 50% 99%,
+        transparent 10%,
+        var(--c-inner) 10% 30%,
+        var(--c-outer) 30% 60%,
+        var(--c-outer2) 60% 100%,
+        transparent 100%
+    );
+    background-size: var(--s) var(--s);
+    animation: move 5s infinite linear;
 }
 
 @keyframes move {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 100% 0;
-  }
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
 }
-
 
 @keyframes hi {
     0% {
@@ -299,4 +296,25 @@ button:hover {
 
 .formulario-renta label {
     color: #555;
+}
+
+/* NUEVO BLOQUE AÑADIDO PARA ALINEAR BOTONES E IMÁGENES */
+.alineacion-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.alineacion-contenido img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.alineacion-contenido button {
+    min-width: 140px;
 }
