@@ -21,6 +21,27 @@
         // Llama a la función para mostrar las películas de Animación
         mostrarPeliculas('animacion');
     </script>
+    <script>
+  async function generarTicket(categoria, index) {
+    const { jsPDF } = window.jspdf;
+    const pelicula = peliculas[categoria][index];
+
+    const doc = new jsPDF();
+
+    doc.setFontSize(16);
+    doc.text("🎟️ Ticket de Compra", 20, 20);
+    doc.setFontSize(12);
+    doc.text(`Película: ${pelicula.titulo}`, 20, 40);
+    doc.text(`Categoría: ${categoria}`, 20, 50);
+    doc.text(`Precio: $15.00 MXN`, 20, 60);
+    doc.text(`Fecha: ${new Date().toLocaleString()}`, 20, 70);
+
+    doc.setFontSize(10);
+    doc.text("Gracias por tu compra. ¡Disfruta tu película!", 20, 90);
+
+    doc.save(`Ticket_${pelicula.titulo.replace(/\s/g, "_")}.pdf`);
+  }
+</script>
 
 </body>
 </html>
