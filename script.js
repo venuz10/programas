@@ -496,7 +496,7 @@ function rentarPelicula(categoria, index) {
           <input type="password" id="nip" name="nip" pattern="\\d{4}" title="Debe tener 4 dígitos"><br><br>
         </div>
 
-        <button type="submit">Confirmar renta</button>
+       <button class="rentar-btn" onclick='generarTicket("${categoria}", ${index})'>Comprar</button>
         <button type="button" id="cerrarModal" style="margin-left:10px;">Cancelar</button>
       </form>
     </div>
