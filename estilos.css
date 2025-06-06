@@ -198,6 +198,11 @@ h2 {
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(208, 27, 160, 0.6);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Para alinear las imágenes y botones dentro de .pelicula */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .pelicula:hover {
@@ -211,6 +216,9 @@ h2 {
     border-radius: 10px;
     margin-bottom: 15px;
     box-shadow: 0 4px 10px rgba(233, 40, 230, 0.414);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pelicula h2 {
@@ -225,6 +233,21 @@ h2 {
     color: #ccc;
 }
 
+.pelicula button {
+    padding: 12px 25px;
+    font-size: 17px;
+    background: linear-gradient(135deg, #b531ca, #610d6e);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 15px 0 0 0;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.7);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    animation: reboteBoton 2s infinite;
+    display: block;
+}
+
 button {
     padding: 12px 25px;
     font-size: 17px;
@@ -237,9 +260,11 @@ button {
     box-shadow: 0 5px 15px rgba(255, 105, 180, 0.7);
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     animation: reboteBoton 2s infinite;
+    display: inline-block;
 }
 
-button:hover {
+button:hover,
+.pelicula button:hover {
     background: linear-gradient(135deg, #c843e6, #7a1691);
     transform: scale(1.07);
     box-shadow: 0 8px 20px rgba(255, 105, 180, 0.9);
@@ -266,6 +291,10 @@ button:hover {
 
 .imagen-destacada {
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .imagen-destacada img {
@@ -274,11 +303,17 @@ button:hover {
     height: auto;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .imagen-debajo-botones {
     margin-top: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .imagen-debajo-botones img {
@@ -286,19 +321,24 @@ button:hover {
     height: auto;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .formulario-renta {
     background-color: #ffc0cb;
     padding: 15px;
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .formulario-renta label {
     color: #555;
 }
 
-/* NUEVO BLOQUE AÑADIDO PARA ALINEAR BOTONES E IMÁGENES */
 .alineacion-contenido {
     display: flex;
     justify-content: center;
@@ -309,12 +349,21 @@ button:hover {
     text-align: center;
 }
 
+.alineacion-contenido > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Asegura que tanto imágenes como botones se centren */
+}
+
 .alineacion-contenido img {
     max-width: 150px;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
 }
 
 .alineacion-contenido img:hover {
@@ -325,4 +374,42 @@ button:hover {
     min-width: 150px;
     padding: 10px 20px;
     font-size: 16px;
+    display: block;
+    margin: 10px auto 0 auto;
+    /* Centra los botones debajo de las imágenes si están juntos */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+    .alineacion-contenido {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .peliculas-container {
+        padding: 10px;
+        gap: 10px;
+    }
+    .pelicula {
+        width: 90vw;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pelicula {
+        width: 80vw;
+        max-width: 200px;
+    }
+    .imagen-destacada img, .imagen-debajo-botones img {
+        width: 80%;
+        max-width: 220px;
+    }
+    .alineacion-contenido img {
+        max-width: 90px;
+    }
+    button,
+    .pelicula button {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
 }
