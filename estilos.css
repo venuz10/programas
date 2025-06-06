@@ -329,7 +329,7 @@ button:hover,
 .alineacion-contenido {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 30px;
@@ -337,69 +337,7 @@ button:hover,
 }
 
 .alineacion-contenido > div {
+    width: 180px; /* Tamaño fijo para cada contenedor */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.alineacion-contenido img {
-    max-width: 150px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    display: block;
-    margin: 0 auto;
-}
-
-.alineacion-contenido img:hover {
-    transform: scale(1.05);
-}
-
-.alineacion-contenido button {
-    min-width: 150px;
-    padding: 10px 20px;
-    font-size: 16px;
-    display: block;
-    margin: 10px auto 0 auto;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .alineacion-contenido {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .peliculas-container {
-        padding: 10px;
-        gap: 10px;
-    }
-    .pelicula {
-        width: 90vw;
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 600px) {
-    .pelicula {
-        width: 80vw;
-        max-width: 200px;
-    }
-    .imagen-destacada img,
-    .imagen-debajo-botones img {
-        width: 80%;
-        max-width: 220px;
-    }
-    .alineacion-contenido img {
-        max-width: 90px;
-    }
-    button,
-    .pelicula button {
-        font-size: 15px;
-        padding: 10px 15px;
-    }
-}
+    align-items
