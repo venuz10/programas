@@ -19,7 +19,7 @@ body {
     position: fixed;
     top: 20px;
     left: 20px; /* cambiado de right a left */
-    z-index: 1000;
+    z-index: 9999; /* aumentado para garantizar que siempre esté encima */
     padding: 10px 20px;
     font-size: 16px;
     background: linear-gradient(135deg, #ff4e50, #f9d423);
@@ -298,3 +298,4 @@ h1, h2 {
 .formulario-renta label {
     color: #555;
 }
+
