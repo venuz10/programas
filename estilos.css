@@ -340,4 +340,34 @@ button:hover,
     width: 180px; /* Tamaño fijo para cada contenedor */
     display: flex;
     flex-direction: column;
-    align-items
+    align-items: center;
+    justify-content: flex-start;
+    /* Asegura que los botones de cada columna estén alineados */
+}
+
+/* NUEVO: Contenedor para botones alineados horizontalmente */
+.botones-alineados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre los botones */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.botones-alineados button {
+    margin: 0; /* Quita el margin de los botones individuales */
+}
+
+/* Responsive para botones alineados */
+@media (max-width: 600px) {
+    .botones-alineados {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    .alineacion-contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+}
