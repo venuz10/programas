@@ -16,6 +16,38 @@
             --color-accent: #ffd93b;
         }
 
+        /* From Uiverse.io by PriyanshSinghBisht */ 
+.container {
+  width: 100%;
+  height: 100%;
+  /* Add your background pattern here */
+  --s: 100px;
+  --c-inner: #adf;
+  --c-outer: skyblue;
+  --c-outer2: white;
+
+  background: radial-gradient(
+    circle at 50% 99%,
+    transparent 10%,
+    var(--c-inner) 10% 30%,
+    var(--c-outer) 30% 60%,
+    var(--c-outer2) 60% 100%,
+    transparent 100%
+  );
+  background-size: var(--s) var(--s);
+  animation: move 5s infinite linear;
+}
+
+@keyframes move {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+
         body {
             margin: 0;
             font-family: 'Montserrat', Arial, sans-serif;
