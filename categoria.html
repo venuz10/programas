@@ -4,141 +4,496 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categorías de Películas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --color-primario: #ff4eae;
+            --color-secundario: #382bff;
+            --color-fondo: #2d2a4a;
+            --color-blanco: #fff;
+            --color-gris: #ececec;
+            --color-form: #fff0fa;
+            --color-accent: #ffd93b;
+        }
+
+        /* Fondo animado - From Uiverse.io by marsella_3472 */
+        .container {
+          position: absolute;
+          inset: 0;
+          z-index: 0;
+        }
+        .container::before {
+          content: "";
+          position: absolute;
+          inset: -145%;
+          rotate: -45deg;
+          background: #000000;
+          background-image: radial-gradient(
+              4px 100px at 0px 235px, rgb(255, 140, 17), #0000
+            ),
+            radial-gradient(4px 100px at 300px 235px, rgb(255, 119, 0), #884e2800),
+            radial-gradient(
+              1.5px 1.5px at 150px 117.5px, rgb(255, 144, 9) 100%, #0000 150%
+            ),
+            radial-gradient(4px 100px at 0px 252px, rgb(156, 14, 137), #0000),
+            radial-gradient(4px 100px at 300px 252px, rgb(23, 41, 206), #0000),
+            radial-gradient(
+              1.5px 1.5px at 150px 126px, rgb(247, 102, 18) 100%, #0000 150%
+            ),
+            radial-gradient(4px 100px at 0px 150px, rgb(249, 121, 16), #0000),
+            radial-gradient(4px 100px at 300px 150px, rgb(255, 128, 18), #0000),
+            radial-gradient(
+              1.5px 1.5px at 150px 75px, rgb(255, 116, 10) 100%, #0000 150%
+            ),
+            radial-gradient(4px 100px at 0px 253px, rgb(249, 137, 17), #0000),
+            radial-gradient(4px 100px at 300px 253px, rgb(248, 107, 14), #0000),
+            radial-gradient(
+              1.5px 1.5px at 150px 126.5px, rgb(252, 129, 14) 100%, #0000 150%
+            ),
+            radial-gradient(4px 100px at 0px 204px, rgb(234, 115, 18), #0000),
+            radial-gradient(4px 100px at 300px 204px, rgb(255, 139, 6), #0000),
+            radial-gradient(
+              1.5px 1.5px at 150px 102px, rgb(255, 128, 9) 100%, #0000 150%
+            ),
+            radial-gradient(4px 100px at 0px 134px, rgb(249, 133, 9), #0000),
+            radial-gradient(4px 100px at 300px 134px, rgb(251, 125, 15), #0000),
+            radial-gradient(
+              1.5px 1.5px at 150px 67px, rgb(255, 146, 13) 100%, #0000 150%
+            ),
+            radial-gradient(4px 100px at 0px 179px, rgb(249, 137, 17), #0000),
+            radial-gradient(4px 100px at 300px 179px, rgb(253, 122, 6), #0000),
+            radial-gradient(
+              1.5px 1.5px at 150px 89.5px, rgb(234, 132, 7) 100%, #0000 150%
+            ),
+            radial-gradient(4px 100px at 0px 299px, rgb(255, 115, 0), #0000),
+            radial-gradient(4px 100px at 300px 299px, rgb(255, 136, 0), #0000),
+            radial-gradient(
+              1.5px 1.5px at 150px 149.5px, rgb(255, 123, 0) 100%, #0000 150%
+            ),
+            radial-gradient(4px 100px at 0px 215px, rgb(255, 145, 0), #0000),
+            radial-gradient(4px 100px at 300px 215px, rgb(255, 132, 0), #0000),
+            radial-gradient(
+              1.5px 1.5px at 150px 107.5px, rgb(255, 136, 0) 100%, #0000 150%
+            ),
+            radial-gradient(4px 100px at 0px 281px, rgb(255, 170, 0), #0000),
+            radial-gradient(4px 100px at 300px 281px, rgb(255, 115, 0), #0000),
+            radial-gradient(
+              1.5px 1.5px at 150px 140.5px, rgb(255, 119, 0) 100%, #0000 150%
+            ),
+            radial-gradient(4px 100px at 0px 158px, rgb(255, 123, 0), #0000),
+            radial-gradient(4px 100px at 300px 158px, rgb(255, 132, 0), #0000),
+            radial-gradient(
+              1.5px 1.5px at 150px 79px, rgb(255, 149, 0) 100%, #0000 150%
+            ),
+            radial-gradient(4px 100px at 0px 210px, rgb(255, 123, 0), #0000),
+            radial-gradient(4px 100px at 300px 210px, rgb(255, 162, 0), #0000),
+            radial-gradient(
+              1.5px 1.5px at 150px 105px, rgb(255, 136, 0) 100%, #0000 150%
+            );
+          background-size:
+            300px 235px,
+            300px 235px,
+            300px 235px,
+            300px 252px,
+            300px 252px,
+            300px 252px,
+            300px 150px,
+            300px 150px,
+            300px 150px,
+            300px 253px,
+            300px 253px,
+            300px 253px,
+            300px 204px,
+            300px 204px,
+            300px 204px,
+            300px 134px,
+            300px 134px,
+            300px 134px,
+            300px 179px,
+            300px 179px,
+            300px 179px,
+            300px 299px,
+            300px 299px,
+            300px 299px,
+            300px 215px,
+            300px 215px,
+            300px 215px,
+            300px 281px,
+            300px 281px,
+            300px 281px,
+            300px 158px,
+            300px 158px,
+            300px 158px,
+            300px 210px,
+            300px 210px,
+            300px 210px;
+          animation: hi 150s linear infinite;
+          z-index: 1;
+        }
+        @keyframes hi {
+          0% {
+            background-position: 0px 220px, 3px 220px, 151.5px 337.5px, 25px 24px, 28px 24px, 176.5px 150px, 50px 16px, 53px 16px, 201.5px 91px, 75px 224px, 78px 224px, 226.5px 350.5px, 100px 19px, 103px 19px, 251.5px 121px, 125px 120px, 128px 120px, 276.5px 187px, 150px 31px, 153px 31px, 301.5px 120.5px, 175px 235px, 178px 235px, 326.5px 384.5px, 200px 121px, 203px 121px, 351.5px 228.5px, 225px 224px, 228px 224px, 376.5px 364.5px, 250px 26px, 253px 26px, 401.5px 105px, 275px 75px, 278px 75px, 426.5px 180px;
+          }
+          to {
+            background-position: 0px 6800px, 3px 6800px, 151.5px 6917.5px, 25px 13632px, 28px 13632px, 176.5px 13758px, 50px 5416px, 53px 5416px, 201.5px 5491px, 75px 17175px, 78px 17175px, 226.5px 17301.5px, 100px 5119px, 103px 5119px, 251.5px 5221px, 125px 8428px, 128px 8428px, 276.5px 8495px, 150px 9876px, 153px 9876px, 301.5px 9965.5px, 175px 13391px, 178px 13391px, 326.5px 13540.5px, 200px 14741px, 203px 14741px, 351.5px 14848.5px, 225px 18770px, 228px 18770px, 376.5px 18910.5px, 250px 5082px, 253px 5082px, 401.5px 5161px, 275px 6375px, 278px 6375px, 426.5px 6480px;
+          }
+        }
+
         body {
-            font-family: 'Montserrat', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: white; /* Fondo sin imagen */
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--color-secundario) 0%, var(--color-primario) 100%);
+            min-height: 100vh;
+            color: var(--color-blanco);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
         }
 
         .bienvenida {
             text-align: center;
-            padding: 2rem 1rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 3;
+        }
+        .bienvenida h1 {
+            font-size: 2.2rem;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-primario));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px #0003;
         }
 
         .categorias {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
-            padding: 1rem;
+            gap: 1.3rem;
+            margin-bottom: 2.2rem;
+            position: relative;
+            z-index: 3;
         }
 
+        .categorias a {
+            text-decoration: none;
+        }
+
+        /* Nuevo estilo de botón - Uiverse.io by gharsh11032000 */
         .button {
-            background-color: #ff4b2b;
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1rem;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+          position: relative;
+          width: 140px;
+          height: 46px;
+          background-color: #000;
+          display: flex;
+          align-items: center;
+          color: white;
+          flex-direction: row;
+          justify-content: center;
+          border: none;
+          padding: 12px 20px;
+          gap: 12px;
+          border-radius: 8px;
+          cursor: pointer;
+          font-family: 'Montserrat', Arial, sans-serif;
+          font-size: 1.1rem;
+          font-weight: 700;
+          transition: transform 0.13s, box-shadow 0.13s;
+          z-index: 1;
+          overflow: hidden;
         }
-
+        .button .icono-peli {
+          width: 1.5em;
+          height: 1.5em;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .button::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          left: -4px;
+          top: -1px;
+          margin: auto;
+          width: 148px;
+          height: 54px;
+          border-radius: 10px;
+          background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+          z-index: -10;
+          pointer-events: none;
+          transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .button::after {
+          content: "";
+          z-index: -1;
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+          transform: translate3d(0, 0, 0) scale(0.95);
+          filter: blur(20px);
+        }
+        .button:hover::after {
+          filter: blur(30px);
+        }
+        .button:hover::before {
+          transform: rotate(-180deg);
+        }
+        .button:active::before {
+          scale: 0.7;
+        }
         .button:hover {
-            background-color: #ff3a1a;
+          transform: scale(1.09);
+          box-shadow: 0 8px 32px 0 #0004, 0 1.5px 0 var(--color-accent);
         }
 
-        .icono-peli {
-            margin-right: 0.5rem;
-        }
-
+        /* El resto de los estilos igual que antes */
         form {
-            max-width: 500px;
+            background: var(--color-form);
+            padding: 2.2rem 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 6px 28px 0 #0002;
             margin: 2rem auto;
-            padding: 1rem;
-            background-color: #f5f5f5;
-            border-radius: 10px;
+            max-width: 380px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+            color: #4c3c6f;
+            position: relative;
+            z-index: 3;
         }
-
         form label {
-            display: block;
-            margin-top: 1rem;
+            font-weight: 600;
+            color: var(--color-primario);
         }
-
-        form input,
-        form textarea {
-            width: 100%;
-            padding: 0.5rem;
-            margin-top: 0.3rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        form button {
-            margin-top: 1rem;
-            background-color: #4CAF50;
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .glow-btn, .inicio-btn {
-            display: block;
-            margin: 1rem auto;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 30px;
-            color: white;
-            background-color: #007BFF;
+        form input, form textarea {
+            border-radius: 1rem;
+            border: 1.5px solid var(--color-primario);
+            padding: 0.9rem;
+            font-family: inherit;
             font-size: 1rem;
+            outline: none;
+            background: var(--color-gris);
+            transition: border 0.2s;
+        }
+        form input:focus, form textarea:focus {
+            border: 1.5px solid var(--color-secundario);
+        }
+        form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        form button[type="submit"] {
+            background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+            color: var(--color-blanco);
+            border: none;
+            border-radius: 1.1rem;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 0.9rem 0;
+            margin-top: 0.5rem;
+            box-shadow: 0 2px 10px 0 #0002;
             cursor: pointer;
-            transition: box-shadow 0.3s ease;
+            transition: background 0.3s, transform 0.1s;
+        }
+        form button[type="submit"]:hover {
+            background: linear-gradient(100deg, var(--color-accent), var(--color-primario), var(--color-secundario));
+            transform: translateY(-2px) scale(1.04);
         }
 
-        .glow-btn:hover, .inicio-btn:hover {
-            box-shadow: 0 0 10px #007BFF;
+        .glow-btn {
+            display: block;
+            margin: 1.5rem auto 0 auto;
+            background: linear-gradient(90deg, var(--color-secundario), var(--color-primario));
+            color: var(--color-blanco);
+            padding: 0.9rem 2.2rem;
+            border: none;
+            border-radius: 2rem;
+            font-size: 1.1rem;
+            font-family: inherit;
+            font-weight: 600;
+            box-shadow: 0 0 20px 0 var(--color-primario);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: box-shadow 0.22s, background 0.5s, transform 0.13s;
+            z-index: 3;
+        }
+
+        .inicio-btn {
+            margin: 2.5rem auto 1.5rem auto;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-primario));
+            color: var(--color-fondo);
+            border: none;
+            border-radius: 2rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 800;
+            box-shadow: 0 4px 16px 0 #0002;
+            display: block;
+            cursor: pointer;
+            transition: background 0.4s, transform 0.12s;
+            z-index: 3;
         }
 
         .imagen-debajo-botones {
-            text-align: center;
-            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 3;
+        }
+        .imagen-debajo-botones img {
+            width: 330px;
+            max-width: 80vw;
+            border-radius: 1.7rem;
+            box-shadow: 0 4px 32px 0 #0003;
+            animation: bounceIn 1.4s;
         }
 
-        .imagen-debajo-botones img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
+        @keyframes bounceIn {
+            0% { transform: scale(.8) translateY(80px); opacity: 0; }
+            58% { transform: scale(1.08) translateY(-10px); opacity: 1; }
+            100% { transform: scale(1) translateY(0); }
+        }
+        /* Responsive */
+        @media (max-width: 700px) {
+            .categorias {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            form {
+                padding: 1.1rem 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Fondo animado -->
     <div class="container"></div>
 
     <div class="bienvenida">
-        <h1>Explora nuestras categorías</h1>
+        <h1>Selecciona una categoría para explorar las películas</h1>
     </div>
 
     <div class="categorias">
-        <a href="#accion"><button class="button"><span class="icono-peli">🎬</span> Acción</button></a>
-        <a href="#comedia"><button class="button"><span class="icono-peli">😂</span> Comedia</button></a>
-        <a href="#drama"><button class="button"><span class="icono-peli">🎭</span> Drama</button></a>
-        <a href="#animacion"><button class="button"><span class="icono-peli">🐭</span> Animación</button></a>
-        <a href="#aventura"><button class="button"><span class="icono-peli">🗺️</span> Aventura</button></a>
-        <a href="#distopia"><button class="button"><span class="icono-peli">🛸</span> Distopía</button></a>
+        <a href="accion.html">
+            <button class="button">
+                <span class="icono-peli">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="13" rx="2" fill="#ffd93b"/>
+                        <rect x="2" y="7" width="20" height="4" fill="#2d2a4a"/>
+                        <rect x="2" y="3" width="6" height="4" fill="#ff4eae"/>
+                        <rect x="8" y="3" width="6" height="4" fill="#ffd93b"/>
+                        <rect x="14" y="3" width="6" height="4" fill="#382bff"/>
+                    </svg>
+                </span>
+                Acción
+            </button>
+        </a>
+        <a href="animacion.html">
+            <button class="button">
+                <span class="icono-peli">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="13" rx="2" fill="#ffd93b"/>
+                        <rect x="2" y="7" width="20" height="4" fill="#2d2a4a"/>
+                        <rect x="2" y="3" width="6" height="4" fill="#ff4eae"/>
+                        <rect x="8" y="3" width="6" height="4" fill="#ffd93b"/>
+                        <rect x="14" y="3" width="6" height="4" fill="#382bff"/>
+                    </svg>
+                </span>
+                Animación
+            </button>
+        </a>
+        <a href="drama.html">
+            <button class="button">
+                <span class="icono-peli">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="13" rx="2" fill="#ffd93b"/>
+                        <rect x="2" y="7" width="20" height="4" fill="#2d2a4a"/>
+                        <rect x="2" y="3" width="6" height="4" fill="#ff4eae"/>
+                        <rect x="8" y="3" width="6" height="4" fill="#ffd93b"/>
+                        <rect x="14" y="3" width="6" height="4" fill="#382bff"/>
+                    </svg>
+                </span>
+                Drama
+            </button>
+        </a>
+        <a href="terror.html">
+            <button class="button">
+                <span class="icono-peli">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="13" rx="2" fill="#ffd93b"/>
+                        <rect x="2" y="7" width="20" height="4" fill="#2d2a4a"/>
+                        <rect x="2" y="3" width="6" height="4" fill="#ff4eae"/>
+                        <rect x="8" y="3" width="6" height="4" fill="#ffd93b"/>
+                        <rect x="14" y="3" width="6" height="4" fill="#382bff"/>
+                    </svg>
+                </span>
+                Terror
+            </button>
+        </a>
+        <a href="comedia.html">
+            <button class="button">
+                <span class="icono-peli">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="13" rx="2" fill="#ffd93b"/>
+                        <rect x="2" y="7" width="20" height="4" fill="#2d2a4a"/>
+                        <rect x="2" y="3" width="6" height="4" fill="#ff4eae"/>
+                        <rect x="8" y="3" width="6" height="4" fill="#ffd93b"/>
+                        <rect x="14" y="3" width="6" height="4" fill="#382bff"/>
+                    </svg>
+                </span>
+                Comedia
+            </button>
+        </a>
+        <a href="aventura.html">
+            <button class="button">
+                <span class="icono-peli">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="13" rx="2" fill="#ffd93b"/>
+                        <rect x="2" y="7" width="20" height="4" fill="#2d2a4a"/>
+                        <rect x="2" y="3" width="6" height="4" fill="#ff4eae"/>
+                        <rect x="8" y="3" width="6" height="4" fill="#ffd93b"/>
+                        <rect x="14" y="3" width="6" height="4" fill="#382bff"/>
+                    </svg>
+                </span>
+                Aventura
+            </button>
+        </a>
+        <a href="distopia.html">
+            <button class="button">
+                <span class="icono-peli">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="13" rx="2" fill="#ffd93b"/>
+                        <rect x="2" y="7" width="20" height="4" fill="#2d2a4a"/>
+                        <rect x="2" y="3" width="6" height="4" fill="#ff4eae"/>
+                        <rect x="8" y="3" width="6" height="4" fill="#ffd93b"/>
+                        <rect x="14" y="3" width="6" height="4" fill="#382bff"/>
+                    </svg>
+                </span>
+                Distopía
+            </button>
+        </a>
     </div>
-
-    <form action="#" method="post">
-        <label for="nombre">Tu nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <label for="email">Tu email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="mensaje">Mensaje o sugerencia:</label>
-        <textarea id="mensaje" name="mensaje"></textarea>
-
+    
+    <form action="https://formspree.io/f/xqabeqkk" method="POST">
+        <label for="email" class="info-rosa">Tu correo:</label>
+        <input type="email" name="email" id="email" placeholder="Opcional">
+        <label for="message" class="info-rosa">Tu mensaje:</label>
+        <textarea name="message" id="message" required></textarea>
         <button type="submit">Enviar</button>
     </form>
-
-    <button class="glow-btn">Ver todas las películas</button>
-    <button class="inicio-btn">Volver al inicio</button>
+    <button class="glow-btn" onclick="window.history.back();">Atrás</button>
 
     <div class="imagen-debajo-botones">
-        <img src="https://via.placeholder.com/330x200.png?text=Películas" alt="Imagen ilustrativa">
+        <img src="https://png.pngtree.com/thumb_back/fw800/background/20231007/pngtree-vibrant-pink-3d-render-with-blue-movie-projector-amidst-colorful-balls-image_13517267.png" alt="Imagen categorías" />
     </div>
+
+    <a href="bienvenida.html"><button class="inicio-btn">Regresar</button></a>
+
 </body>
 </html>
