@@ -490,10 +490,10 @@ function rentarPelicula(categoria, index) {
 
         <div id="datosTarjeta" style="display: none;">
           <label for="numeroTarjeta">Número de tarjeta:</label><br>
-          <input type="text" id="numeroTarjeta" name="numeroTarjeta" pattern="\\d{13,16}" title="Debe tener entre 13 y 16 dígitos"><br><br>
+          <input type="text" id="numeroTarjeta" name="numeroTarjeta" pattern="\\d{15,16}" title="Debe tener entre 15 y 16 dígitos"><br><br>
 
           <label for="nip">NIP:</label><br>
-          <input type="password" id="nip" name="nip" pattern="\\d{4}" title="Debe tener 4 dígitos"><br><br>
+          <input type="password" id="CVV" name="CVV" pattern="\\d{3}" title="Debe tener 3 dígitos"><br><br>
         </div>
 
         <button class="rentar-btn" type="submit">Comprar</button>
