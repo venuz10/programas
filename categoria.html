@@ -16,7 +16,7 @@
       --color-accent: #ffd93b;
     }
 
-    /* Fondo animado - From Uiverse.io by PriyanshSinghBisht */
+    /* Fondo animado */
     .container {
       width: 100%;
       height: 100%;
@@ -37,7 +37,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 0;
+      z-index: -1; /* Corregido: estaba en 0 */
     }
 
     @keyframes move {
@@ -58,8 +58,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: relative;
-      z-index: 2;
+      position: relative; /* Asegura que el z-index funcione */
+      z-index: 0;
     }
 
     .bienvenida {
@@ -285,14 +285,15 @@
   <div class="bienvenida">
     <h1>Selecciona una categoría para explorar las películas</h1>
   </div>
-     <div class="categorias">
-        <a href="#accion"><button class="button"><span class="icono-peli">🎬</span> Acción</button></a>
-        <a href="#comedia"><button class="button"><span class="icono-peli">😂</span> Comedia</button></a>
-        <a href="#drama"><button class="button"><span class="icono-peli">🎭</span> Drama</button></a>
-        <a href="#animacion"><button class="button"><span class="icono-peli">🐭</span> Animación</button></a>
-        <a href="#aventura"><button class="button"><span class="icono-peli">🗺️</span> Aventura</button></a>
-        <a href="#distopia"><button class="button"><span class="icono-peli">🛸</span> Distopía</button></a>
-    </div>
+
+  <div class="categorias">
+    <a href="#accion"><button class="button"><span class="icono-peli">🎬</span> Acción</button></a>
+    <a href="#comedia"><button class="button"><span class="icono-peli">😂</span> Comedia</button></a>
+    <a href="#drama"><button class="button"><span class="icono-peli">🎭</span> Drama</button></a>
+    <a href="#animacion"><button class="button"><span class="icono-peli">🐭</span> Animación</button></a>
+    <a href="#aventura"><button class="button"><span class="icono-peli">🗺️</span> Aventura</button></a>
+    <a href="#distopia"><button class="button"><span class="icono-peli">🛸</span> Distopía</button></a>
+  </div>
 
   <form action="https://formspree.io/f/xqabeqkk" method="POST">
     <label for="email">Tu correo:</label>
@@ -301,7 +302,6 @@
     <textarea name="message" id="message" required></textarea>
     <button type="submit">Enviar</button>
   </form>
-
 
   <div class="imagen-debajo-botones">
     <img src="https://png.pngtree.com/thumb_back/fw800/background/20231007/pngtree-vibrant-pink-3d-render-with-blue-movie-projector-amidst-colorful-balls-image_13517267.png" alt="Imagen categorías" />
