@@ -453,54 +453,54 @@ function rentarPelicula(categoria, index) {
   const pelicula = peliculas[categoria][index];
   const modalContainer = document.getElementById('modal-container');
 
-  modalContainer.innerHTML = `
-    <div id="modal" style="
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #ffc0cb;
-      color: #444;
-      padding: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      z-index: 1000;
-      width: 320px;
-      border-radius: 8px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    ">
-      <h2 style="color: #444;">Rentar: ${pelicula.titulo}</h2>
-      <p style="color: #444;"><strong>Precio: $15</strong></p>
-      <form id="rentaForm" onsubmit="event.preventDefault(); generarTicket('${categoria}', ${index});">
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+ modalContainer.innerHTML = `
+  <div id="modal" style="
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffc0cb;
+    color: #444;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    width: 320px;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  ">
+    <h2 style="color: #444;">Rentar: ${pelicula.titulo}</h2>
+    <p style="color: #444;"><strong>Precio: $15</strong></p>
+    <form id="rentaForm" onsubmit="event.preventDefault(); generarTicket('${categoria}', ${index});">
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
 
-        <label for="email">Correo electrónico:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+      <label for="email">Correo electrónico:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
 
-        <label for="telefono">Teléfono:</label><br>
-        <input type="tel" id="telefono" name="telefono" required pattern="\\d{7,15}" title="Solo números, entre 7 y 15 dígitos"><br><br>
+      <label for="telefono">Teléfono:</label><br>
+      <input type="tel" id="telefono" name="telefono" required pattern="\\d{7,15}" minlength="7" maxlength="15" title="Solo números, entre 7 y 15 dígitos"><br><br>
 
-        <label for="tarjeta">Tipo de tarjeta:</label><br>
-        <select id="tarjeta" name="tarjeta" required>
-          <option value="">Selecciona una opción</option>
-          <option value="Visa">Visa</option>
-          <option value="Mastercard">Mastercard</option>
-          <option value="American Express">American Express</option>
-        </select><br><br>
+      <label for="tarjeta">Tipo de tarjeta:</label><br>
+      <select id="tarjeta" name="tarjeta" required>
+        <option value="">Selecciona una opción</option>
+        <option value="Visa">Visa</option>
+        <option value="Mastercard">Mastercard</option>
+        <option value="American Express">American Express</option>
+      </select><br><br>
 
-        <div id="datosTarjeta" style="display: none;">
-          <label for="numeroTarjeta">Número de tarjeta:</label><br>
-          <input type="text" id="numeroTarjeta" name="numeroTarjeta" pattern="\\d{15,16}" title="Debe tener entre 15 y 16 dígitos"><br><br>
+      <div id="datosTarjeta" style="display: none;">
+        <label for="numeroTarjeta">Número de tarjeta:</label><br>
+        <input type="text" id="numeroTarjeta" name="numeroTarjeta" pattern="\\d{15,16}" minlength="15" maxlength="16" title="Debe tener 15 o 16 dígitos"><br><br>
 
-          <label for="nip">CVV:</label><br>
-          <input type="password" id="CVV" name="CVV" pattern="\\d{3}" title="Debe tener 3 dígitos"><br><br>
-        </div>
+        <label for="CVV">CVV:</label><br>
+        <input type="password" id="CVV" name="CVV" pattern="\\d{3}" minlength="3" maxlength="3" title="Debe tener exactamente 3 dígitos"><br><br>
+      </div>
 
-        <button class="rentar-btn" type="submit">Comprar</button>
-        <button type="button" id="cerrarModal" style="margin-left:10px;">Cancelar</button>
-      </form>
-    </div>
-  `;
+      <button class="rentar-btn" type="submit">Comprar</button>
+      <button type="button" id="cerrarModal" style="margin-left:10px;">Cancelar</button>
+    </form>
+  </div>
+`;
 
   // Mostrar campos de tarjeta solo si se selecciona una opción válida
   const tarjetaSelect = document.getElementById('tarjeta');
